@@ -8,12 +8,8 @@ class Viewer:
         self.dtx_enabled = kwargs["dtx_enabled"]
 
     def __str__(self):
-        return """const {} = new Viewer({
-        canvasId: "{}",
-        transparent: {},
-        dtxEnabled: {} // Enable data texture model representation
-        });""".format(self.viewer_id, self.canvas_id, self.transparent.lower(), self.dtx_enabled.lower())
+        return "const " + self.viewer_id + " = new Viewer({\n" + "    canvasId: \"" + self.canvas_id + "\",\n" + "    transparent: " + str(self.transparent).lower() + ",\n" + "    dtxEnabled: " + str(self.dtx_enabled).lower() + "\n""});"
 
     @staticmethod
-    def get_libraries_needed():
+    def get_xeokit_modules_needed():
         return {"Viewer"}

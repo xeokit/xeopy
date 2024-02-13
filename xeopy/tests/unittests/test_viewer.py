@@ -18,3 +18,19 @@ def test_init_all_filled():
     assert viewer.canvas_id == "another_canvas"
     assert viewer.transparent is False
     assert viewer.dtx_enabled is False
+
+
+def test_str():
+    viewer = Viewer()
+
+    assert viewer.__str__() == """const viewer = new Viewer({
+    canvasId: "xeokit_canvas",
+    transparent: true,
+    dtxEnabled: true
+});"""
+
+
+def test_get_xeokit_modules_needed():
+    viewer = Viewer()
+
+    assert viewer.get_xeokit_modules_needed() == {"Viewer"}
