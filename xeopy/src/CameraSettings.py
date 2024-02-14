@@ -7,3 +7,12 @@ class CameraSettings:
         self.eye = kwargs["eye"]
         self.look = kwargs["look"]
         self.up = kwargs["up"]
+
+    def __str__(self):
+        return self.viewer_id + ".camera.eye = + " + str(self.eye) + ";\n"\
+             + self.viewer_id + ".camera.look = + " + str(self.look) + ";\n"\
+             + self.viewer_id + ".camera.up = + " + str(self.up) + ";\n"
+
+    @staticmethod
+    def get_xeokit_modules_needed():
+        return {}
