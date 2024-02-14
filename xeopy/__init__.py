@@ -1,1 +1,2 @@
-from xeopy.xeo import *
+from xeopy.src.Viewer import *
+from xeopy.src.CameraSettings import *
