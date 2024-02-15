@@ -1,9 +1,9 @@
 import pytest
-from xeopy import Xeokit
+from xeopy import *
 
 
 def test_create():
-    xeokit = Xeokit()
+    xeokit = Xeokit(content=[Viewer(), CameraSettings(), IfcLoader(path="Duplex.ifc")])
     actual = xeokit.create()
     f = open("actual_created.html", "w")
     f.write(actual)

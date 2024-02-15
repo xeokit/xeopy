@@ -1,4 +1,5 @@
 from xeopy import *
+import webbrowser
 
 
 class Xeokit:
