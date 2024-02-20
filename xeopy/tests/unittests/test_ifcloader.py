@@ -7,13 +7,15 @@ def test_init_default():
 
     assert ifcLoader.path == "Duplex.ifc"
     assert ifcLoader.edges is True
+    assert ifcLoader.viewer_id == "viewer"
 
 
 def test_init_all_filled():
-    ifcLoader = IfcLoader(path="IfcOpenHouse2x3.ifc", edges=False)
+    ifcLoader = IfcLoader(path="IfcOpenHouse2x3.ifc", edges=False, viewer_id="another_viewer")
 
     assert ifcLoader.path == "IfcOpenHouse2x3.ifc"
     assert ifcLoader.edges is False
+    assert ifcLoader.viewer_id == "another_viewer"
 
 
 def test_str():
