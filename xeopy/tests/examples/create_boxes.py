@@ -6,7 +6,7 @@ y_range = (-20.0, 20.0)
 z_range = (-30.0, 30.0)
 box_size_range = (0.6, 1.0)
 points = []
-[points.append((random.uniform(*x_range), random.uniform(*y_range), random.uniform(*z_range))) for i in range(200)]
+[points.append((random.uniform(*x_range), random.uniform(*y_range), random.uniform(*z_range))) for i in range(1000)]
 boxes = []
 for i in points:
     boxes.append(Box(x_size=random.uniform(*box_size_range),
