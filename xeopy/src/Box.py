@@ -11,5 +11,9 @@ class Box:
         self.viewer_id = kwargs["viewer_id"]
 
     @staticmethod
+    def get_additional_imports():
+        return {}
+
+    @staticmethod
     def get_xeokit_modules_needed():
         return {"ReadableGeometry", "buildBoxGeometry"}

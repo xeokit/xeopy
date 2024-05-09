@@ -15,5 +15,9 @@ class Viewer:
                         "});"])
 
     @staticmethod
+    def get_additional_imports():
+        return {}
+
+    @staticmethod
     def get_xeokit_modules_needed():
         return {"Viewer"}

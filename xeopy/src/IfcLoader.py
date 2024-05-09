@@ -8,15 +8,25 @@ class IfcLoader:
 
     def __str__(self):
         return """
-    const webIFCLoader = new WebIFCLoaderPlugin(""" + self.viewer_id + """, {
-        wasmPath: "https://cdn.jsdelivr.net/npm/@xeokit/xeokit-sdk/dist/"
-    });
+    const IfcAPI = new WebIFC.IfcAPI();
+    IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");
 
-    const model = webIFCLoader.load({
-        src: \"""" + self.path + """\",
-        edges: """ + str(self.edges).lower() + """
+    IfcAPI.Init().then(() => {
+        const ifcLoader = new WebIFCLoaderPlugin(""" + self.viewer_id + """, {
+            WebIFC,
+            IfcAPI
+        });
+
+        const model = ifcLoader.load({
+            src: \"""" + self.path + """\",
+            edges: """ + str(self.edges).lower() + """
+        });
     });
 """
+
+    @staticmethod
+    def get_additional_imports():
+        return {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
 
     @staticmethod
     def get_xeokit_modules_needed():
