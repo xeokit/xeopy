@@ -1,0 +1,2042 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>xeokit Example</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+        }
+
+        #xeokit_canvas {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: lightblue;
+            background-image: linear-gradient(lightblue, white);
+        }
+    </style>
+</head>
+<body>
+<canvas id="xeokit_canvas"></canvas>
+</body>
+<script id="source" type="module">
+import {Viewer, PhongMaterial, Mesh, buildBoxGeometry, ReadableGeometry} from
+                "https://cdn.jsdelivr.net/npm/@xeokit/xeokit-sdk/dist/xeokit-sdk.es.min.js";
+const viewer = new Viewer({
+    canvasId: "xeokit_canvas",
+    transparent: true,
+    dtxEnabled: true
+});
+viewer.camera.eye = + [-3.933, 2.855, 27.018];
+viewer.camera.look = + [4.4, 3.724, 8.899];
+viewer.camera.up = + [-0.018, 0.999, 0.039];
+
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.4771671327848575, 13.97927008933199, 26.516177970453796],
+       xSize: 0.6153576712234269,
+       ySize: 0.6937053575673295,
+       zSize: 0.6998934884713217,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.34771671327848575, 0.6989635044665995, 0.8838725990151265],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.291244903113828, 1.3258942800351008, 12.145580290370575],
+       xSize: 0.934651881072009,
+       ySize: 0.8706875760794444,
+       zSize: 0.9830560056825944,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1291244903113828, 0.06629471400175505, 0.40485267634568584],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.079224960472374, 5.132328365349931, 3.1118614001311613],
+       xSize: 0.9425262626355438,
+       ySize: 0.6200339786781462,
+       zSize: 0.7222858521642648,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9079224960472374, 0.25661641826749654, 0.10372871333770538],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.823604107038452, -5.379661529224391, 22.34462714544761],
+       xSize: 0.7961809133693196,
+       ySize: 0.6970415177641531,
+       zSize: 0.703042058812707,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7823604107038452, 0.26898307646121955, 0.7448209048482537],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.236111344114292, 7.57833320105631, -18.08028336953287],
+       xSize: 0.8211261294544072,
+       ySize: 0.8565522455177268,
+       zSize: 0.981072319321921,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1236111344114292, 0.3789166600528155, 0.6026761123177624],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.913492361468969, 9.633046120559605, -7.344996322728516],
+       xSize: 0.7486360386215523,
+       ySize: 0.9438180306364243,
+       zSize: 0.9464473296285111,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6913492361468969, 0.48165230602798026, 0.2448332107576172],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.242626289645745, 6.523007253310382, -18.10683475905474],
+       xSize: 0.9133634285870498,
+       ySize: 0.7529332495498003,
+       zSize: 0.9804580021910552,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9242626289645746, 0.3261503626655191, 0.6035611586351579],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.855458219093137, 2.7498104418596654, -10.11451080581828],
+       xSize: 0.7571959694678205,
+       ySize: 0.8110330162983245,
+       zSize: 0.8093246478601944,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3855458219093137, 0.13749052209298326, 0.3371503601939427],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.25889496230118, 4.970043891340175, -7.9992715223338955],
+       xSize: 0.995623527149065,
+       ySize: 0.6230011753026722,
+       zSize: 0.846603444034268,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.325889496230118, 0.24850219456700878, 0.2666423840777965],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.374052901192933, -3.6766138792238507, 5.071052901571925],
+       xSize: 0.9381048894818328,
+       ySize: 0.7242507304018105,
+       zSize: 0.6694298084302052,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7374052901192933, 0.18383069396119253, 0.16903509671906417],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.250493379712218, 11.56904561109424, -20.5626242387969],
+       xSize: 0.8724964312081689,
+       ySize: 0.9820365596479581,
+       zSize: 0.8194026931961454,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7250493379712217, 0.578452280554712, 0.6854208079598967],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.804021344271522, 4.85038163568354, 19.113108978050676],
+       xSize: 0.921613806448388,
+       ySize: 0.7903773862047928,
+       zSize: 0.9647913122258469,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1804021344271522, 0.242519081784177, 0.6371036326016892],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.598514978450613, -13.051420772467871, 6.186829426086568],
+       xSize: 0.8874815699833576,
+       ySize: 0.7329596518603788,
+       zSize: 0.9101013462128051,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7598514978450612, 0.6525710386233936, 0.20622764753621894],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.1424023115564559, -9.8546794336905, -8.002503154997871],
+       xSize: 0.6592317433257878,
+       ySize: 0.7684765038655841,
+       zSize: 0.8238237870804549,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.11424023115564559, 0.492733971684525, 0.2667501051665957],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.923119090617973, 7.205423678747877, -10.469238379202185],
+       xSize: 0.9165302304876143,
+       ySize: 0.6698353973144555,
+       zSize: 0.7689065201903801,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7923119090617974, 0.3602711839373939, 0.34897461264007285],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.3134497762810007, -17.125516771406545, 3.6894366388359856],
+       xSize: 0.7313635529256901,
+       ySize: 0.6699178131844479,
+       zSize: 0.7759318058683877,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.13134497762810007, 0.8562758385703273, 0.12298122129453286],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.099616766484285, 11.961310604750079, 0.31801434512386706],
+       xSize: 0.6933562296091926,
+       ySize: 0.8165501012999753,
+       zSize: 0.7530190340073888,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8099616766484286, 0.598065530237504, 0.010600478170795569],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.4733242601402807, -5.840124002865746, 14.87607834721915],
+       xSize: 0.7357359312150544,
+       ySize: 0.8838847256229391,
+       zSize: 0.8051802000589106,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3473324260140281, 0.2920062001432873, 0.4958692782406383],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.541423893647135, -12.83849625249729, 24.79205271921463],
+       xSize: 0.914381716863885,
+       ySize: 0.7257168039966855,
+       zSize: 0.614556176137888,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5541423893647135, 0.6419248126248644, 0.8264017573071544],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.081688435959393, -1.36874994460603, 28.042935363942505],
+       xSize: 0.9650254360883497,
+       ySize: 0.9595205873559746,
+       zSize: 0.9914967724106235,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6081688435959393, 0.0684374972303015, 0.9347645121314169],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.8064031560012772, 14.648033634575803, -18.04632640798676],
+       xSize: 0.6555615407404934,
+       ySize: 0.7707829064956442,
+       zSize: 0.7839108515877602,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.18064031560012772, 0.7324016817287902, 0.6015442135995587],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.357152002611961, -0.25133745029382837, 14.473140076349559],
+       xSize: 0.9861637958541091,
+       ySize: 0.8983508675236345,
+       zSize: 0.9628983280256697,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8357152002611962, 0.012566872514691418, 0.4824380025449853],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.332470366575112, -17.846256411497073, 26.959500733534725],
+       xSize: 0.8187414158077427,
+       ySize: 0.6106089865029233,
+       zSize: 0.9416639876130235,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.43324703665751124, 0.8923128205748536, 0.8986500244511575],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.3565320833799275, -1.7387079116173965, 9.3011118503821],
+       xSize: 0.8455322402441101,
+       ySize: 0.6409567331864027,
+       zSize: 0.9914345041616168,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.23565320833799275, 0.08693539558086982, 0.3100370616794033],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.997018325553601, -11.437302974215179, -0.724033555692472],
+       xSize: 0.7632332463429361,
+       ySize: 0.9192824755590355,
+       zSize: 0.7184341111631415,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.59970183255536, 0.5718651487107589, 0.02413445185641573],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.031601799935039, -17.694838092953272, 3.0962062506035863],
+       xSize: 0.7500057574080393,
+       ySize: 0.8784237021264392,
+       zSize: 0.6558443819182812,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5031601799935039, 0.8847419046476637, 0.10320687502011955],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.198590370501776, 9.235067880736484, -13.3915907206637],
+       xSize: 0.8889689559663061,
+       ySize: 0.6980977406943076,
+       zSize: 0.6980412890077804,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5198590370501777, 0.4617533940368242, 0.4463863573554567],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.85167915982726, -19.33688923960483, -18.638436856848788],
+       xSize: 0.6306709002133775,
+       ySize: 0.7786802928449575,
+       zSize: 0.6639282632768632,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.585167915982726, 0.9668444619802414, 0.6212812285616263],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.422376670408958, 2.991975024334131, 23.3499493626964],
+       xSize: 0.9792270576773169,
+       ySize: 0.6957704418968803,
+       zSize: 0.6810499934093285,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6422376670408958, 0.14959875121670657, 0.7783316454232133],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.719585674211023, -3.86835294680775, -17.74947393502849],
+       xSize: 0.7438540070442052,
+       ySize: 0.8190896543411852,
+       zSize: 0.7191618799479897,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5719585674211023, 0.19341764734038752, 0.5916491311676163],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [4.613165667457054, 6.13063554786293, 4.9157176209523],
+       xSize: 0.6929778697506428,
+       ySize: 0.946390059041513,
+       zSize: 0.6045676727410683,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.46131656674570537, 0.3065317773931465, 0.16385725403174334],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.194323515127589, -19.56389069926069, -26.228896753717454],
+       xSize: 0.6307095429194103,
+       ySize: 0.7352201580243846,
+       zSize: 0.9217709903980359,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.4194323515127589, 0.9781945349630344, 0.8742965584572484],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.155614554576829, 2.051899589394438, -28.77565894072658],
+       xSize: 0.9734081703208156,
+       ySize: 0.7117926250158373,
+       zSize: 0.7121996586607182,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8155614554576829, 0.10259497946972189, 0.9591886313575526],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.659063607496122, 15.604853472529932, 23.4189837467934],
+       xSize: 0.9232441535589904,
+       ySize: 0.8171668458553152,
+       zSize: 0.749448144179368,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9659063607496122, 0.7802426736264966, 0.78063279155978],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.304872207809913, 17.20438815374149, -20.062352389550433],
+       xSize: 0.7189893554718028,
+       ySize: 0.9893391412955154,
+       zSize: 0.948809206771307,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6304872207809913, 0.8602194076870745, 0.6687450796516811],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.654701841037535, -18.522902884038544, 29.998745767784982],
+       xSize: 0.9417722584807049,
+       ySize: 0.7744965665370176,
+       zSize: 0.8118631574343309,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5654701841037535, 0.9261451442019272, 0.9999581922594994],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.953789459807005, 14.579653351327224, -28.35728241723877],
+       xSize: 0.9293641476910974,
+       ySize: 0.701959441843203,
+       zSize: 0.9852242989127182,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8953789459807006, 0.7289826675663612, 0.9452427472412924],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.488071784976702, 11.86649630258028, 1.03910128846967],
+       xSize: 0.8641520706994928,
+       ySize: 0.780444920649974,
+       zSize: 0.6312597660725966,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5488071784976702, 0.593324815129014, 0.03463670961565567],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.3883510825230054, -18.379867549175902, 20.319672479469602],
+       xSize: 0.9175039217026564,
+       ySize: 0.6952271138568038,
+       zSize: 0.6005325529969135,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.13883510825230055, 0.9189933774587951, 0.6773224159823201],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-0.3652522745370952, 16.740922400210664, 6.721805584028161],
+       xSize: 0.7390375058424579,
+       ySize: 0.6965097402640746,
+       zSize: 0.7599407361809724,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.03652522745370952, 0.8370461200105332, 0.22406018613427203],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.0640782302016216, -4.9276912374055435, 14.913618269032547],
+       xSize: 0.7784249226222117,
+       ySize: 0.9490426516749558,
+       zSize: 0.8603445722636126,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.10640782302016216, 0.24638456187027719, 0.49712060896775156],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.47068608993444, -18.674693513670242, 7.4518007157712205],
+       xSize: 0.9414756836634767,
+       ySize: 0.8014954087094288,
+       zSize: 0.7704753327218095,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9470686089934439, 0.9337346756835121, 0.24839335719237401],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [2.2097305945999253, 1.09291396243475, 10.811577647850982],
+       xSize: 0.8233274397261265,
+       ySize: 0.9434433853168989,
+       zSize: 0.633683584766395,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.22097305945999252, 0.054645698121737495, 0.36038592159503274],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [2.4905138839934704, 11.148955683644886, -6.752848946634046],
+       xSize: 0.8435989457196774,
+       ySize: 0.7410080021498864,
+       zSize: 0.8715460361455809,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.24905138839934704, 0.5574477841822443, 0.22509496488780154],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [4.846107020317898, 4.622782935247297, 15.002586774007128],
+       xSize: 0.7933697836097642,
+       ySize: 0.672356535054458,
+       zSize: 0.672518587738617,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.48461070203178985, 0.23113914676236486, 0.5000862258002375],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.2320877744552865, -17.290546365630533, 28.685171650599763],
+       xSize: 0.6296775414028337,
+       ySize: 0.8644465603015161,
+       zSize: 0.7167050901769701,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.42320877744552865, 0.8645273182815266, 0.9561723883533254],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.207332885885812, -4.679682345341414, -2.117283255034149],
+       xSize: 0.6668809741327721,
+       ySize: 0.967497506670572,
+       zSize: 0.6685958482629681,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9207332885885812, 0.2339841172670707, 0.0705761085011383],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.6974862380274374, -2.7610725095584314, -26.629034527480886],
+       xSize: 0.9629700463194583,
+       ySize: 0.9954235655458764,
+       zSize: 0.8927189622050348,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.16974862380274375, 0.13805362547792158, 0.8876344842493629],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.572637886177145, -0.0815909225969591, 8.647424857124925],
+       xSize: 0.864263450448831,
+       ySize: 0.8283297096117282,
+       zSize: 0.7002476927530363,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5572637886177145, 0.004079546129847955, 0.2882474952374975],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.4350005721357846, -3.1176474457037884, -9.745805199053653],
+       xSize: 0.9909619371199272,
+       ySize: 0.6141656289846692,
+       zSize: 0.9422163890061007,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.34350005721357846, 0.15588237228518942, 0.3248601733017884],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.424937093652691, -17.890625239844127, -4.299843387084557],
+       xSize: 0.8861745363486919,
+       ySize: 0.7310736356214729,
+       zSize: 0.8130652807316902,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6424937093652691, 0.8945312619922063, 0.14332811290281858],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.6201003960145588, 19.354703465919442, 18.452799218029597],
+       xSize: 0.9849785313011014,
+       ySize: 0.8322354667048059,
+       zSize: 0.9859057590949685,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.16201003960145588, 0.9677351732959721, 0.6150933072676532],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.62205192935348, -10.453187180138777, 28.995095445064806],
+       xSize: 0.6759835899546942,
+       ySize: 0.6149000251898149,
+       zSize: 0.6097232990032008,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6622051929353481, 0.5226593590069388, 0.9665031815021602],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.070740550624409, 6.198683662346603, -17.892799279952445],
+       xSize: 0.9544696913116959,
+       ySize: 0.7502838915142417,
+       zSize: 0.6736319372242021,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1070740550624409, 0.3099341831173302, 0.5964266426650815],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.6092080625296212, 5.7928223612128775, -4.59453212040955],
+       xSize: 0.9026019171702138,
+       ySize: 0.7556026286145259,
+       zSize: 0.6312429876544691,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.060920806252962124, 0.28964111806064385, 0.15315107068031833],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.5181487312013164, 13.581166066973289, -18.539047669428207],
+       xSize: 0.9719489950178278,
+       ySize: 0.860743631762352,
+       zSize: 0.8994776639232203,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.15181487312013164, 0.6790583033486645, 0.6179682556476069],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.0630064619375634, -12.187741346444486, 18.386277603093454],
+       xSize: 0.7006499264885984,
+       ySize: 0.6008592684213084,
+       zSize: 0.640842537698942,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.30630064619375635, 0.6093870673222244, 0.6128759201031151],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.155593084447496, 0.9501680984197414, 28.338975276938605],
+       xSize: 0.757280218286133,
+       ySize: 0.7939997340352648,
+       zSize: 0.7485210814747385,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9155593084447495, 0.04750840492098707, 0.9446325092312868],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.351351798844037, -10.69816239979489, 9.769311374122779],
+       xSize: 0.6812474990882834,
+       ySize: 0.9047660343021947,
+       zSize: 0.643244708943671,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7351351798844037, 0.5349081199897445, 0.3256437124707593],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.1459699122658495, -9.32365606281504, -17.740850031120697],
+       xSize: 0.9316142832300442,
+       ySize: 0.8566054728142084,
+       zSize: 0.8518294819612857,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.41459699122658494, 0.466182803140752, 0.5913616677040232],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.92321816398822, -4.480656916449167, 5.1727169863962175],
+       xSize: 0.6701795340852511,
+       ySize: 0.7274180748791386,
+       zSize: 0.9271205311080751,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.892321816398822, 0.22403284582245836, 0.17242389954654058],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-9.422491716433088, 13.269706832303505, 7.8136189818480375],
+       xSize: 0.9121706281194781,
+       ySize: 0.9313905641721663,
+       zSize: 0.852702901145485,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9422491716433088, 0.6634853416151753, 0.26045396606160126],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.2848102251838185, 16.927534835739152, 10.78523052872876],
+       xSize: 0.9206198173884311,
+       ySize: 0.7865263800286397,
+       zSize: 0.860332817692031,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6284810225183819, 0.8463767417869577, 0.3595076842909587],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.802907769252753, 15.388343288879163, -3.224686649772181],
+       xSize: 0.9941009941184785,
+       ySize: 0.9606107214417468,
+       zSize: 0.8894991859431607,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.48029077692527533, 0.7694171644439581, 0.10748955499240603],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.695974041107458, -15.103158105161349, 7.255290000988381],
+       xSize: 0.9458491384524752,
+       ySize: 0.9936545280397784,
+       zSize: 0.8930291024832417,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8695974041107458, 0.7551579052580675, 0.24184300003294604],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [2.5415554311773327, 5.801910673471387, -10.996516122382715],
+       xSize: 0.7109771039487676,
+       ySize: 0.6567086886294335,
+       zSize: 0.8322413719115183,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.25415554311773325, 0.29009553367356933, 0.36655053741275717],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.595497911156631, -6.701432498076109, 18.381974752092063],
+       xSize: 0.7177059832577799,
+       ySize: 0.7652228017823421,
+       zSize: 0.731865431209197,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.059549791115663095, 0.33507162490380543, 0.6127324917364021],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.953970354050082, 10.903911803217376, -1.9262572547293253],
+       xSize: 0.6092102131236761,
+       ySize: 0.7364875851680732,
+       zSize: 0.946676710230937,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6953970354050082, 0.5451955901608688, 0.06420857515764418],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.442870103501612, -1.6870253546989318, -28.13296228011293],
+       xSize: 0.9980357509098026,
+       ySize: 0.6649377978136782,
+       zSize: 0.687324269737398,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5442870103501611, 0.08435126773494658, 0.9377654093370977],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-0.9093667255369002, -12.502232081239137, -21.208720840472843],
+       xSize: 0.7665316283718865,
+       ySize: 0.6938636001843033,
+       zSize: 0.7939835062083479,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.09093667255369002, 0.6251116040619569, 0.7069573613490948],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.440532305819264, -3.143868174702554, 17.650338518935612],
+       xSize: 0.9381831180850815,
+       ySize: 0.8255663111200945,
+       zSize: 0.6570246757774346,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.4440532305819264, 0.15719340873512772, 0.5883446172978537],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.9439323668366413, -10.873138539735159, 17.601224781071252],
+       xSize: 0.8567672638197995,
+       ySize: 0.6292622515597992,
+       zSize: 0.6918896383026201,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.09439323668366413, 0.5436569269867579, 0.5867074927023751],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.7457533498219, -5.995304283688991, 29.086864543643273],
+       xSize: 0.9820240064371301,
+       ySize: 0.887247368173685,
+       zSize: 0.6627474529568992,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.67457533498219, 0.29976521418444957, 0.9695621514547758],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.5461381820748237, 15.788232759332246, 29.635652748664278],
+       xSize: 0.6904255543089194,
+       ySize: 0.7466777688528985,
+       zSize: 0.6707850733588198,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.054613818207482366, 0.7894116379666123, 0.9878550916221426],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.33389496541268393, -3.3579055592120426, -11.767913178660699],
+       xSize: 0.9227194780568745,
+       ySize: 0.7574558957121404,
+       zSize: 0.7510037497870787,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.033389496541268396, 0.16789527796060214, 0.3922637726220233],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.8296408132978046, -12.138346017276124, -23.217664466771094],
+       xSize: 0.8034186037395478,
+       ySize: 0.6236779232162041,
+       zSize: 0.8106330390254622,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.28296408132978046, 0.6069173008638062, 0.7739221488923698],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.8730040910512393, 16.93613530012057, -6.054552404498423],
+       xSize: 0.9514656192963326,
+       ySize: 0.8971583285781124,
+       zSize: 0.9654777395699095,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.28730040910512394, 0.8468067650060285, 0.20181841348328078],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.186208324679972, -9.028475065688042, 5.350717665160218],
+       xSize: 0.8957055033450108,
+       ySize: 0.7087528924579587,
+       zSize: 0.6259882751617506,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5186208324679973, 0.4514237532844021, 0.1783572555053406],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.593287188275912, 16.28293800805426, -8.669627977048705],
+       xSize: 0.9116926134918142,
+       ySize: 0.9139578981733453,
+       zSize: 0.9761301202596849,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7593287188275912, 0.814146900402713, 0.2889875992349568],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.698051242317385, 10.767920989481546, -11.28456293461214],
+       xSize: 0.641255630296895,
+       ySize: 0.8652742749009694,
+       zSize: 0.8319598780034625,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5698051242317386, 0.5383960494740773, 0.37615209782040465],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-9.444117245148107, -15.000586589558512, -24.67556497129931],
+       xSize: 0.7350751683613829,
+       ySize: 0.9461232807747935,
+       zSize: 0.9769211527595839,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9444117245148107, 0.7500293294779257, 0.8225188323766436],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.368809054681961, 14.754224122316522, 1.1801636775678688],
+       xSize: 0.9943007714616389,
+       ySize: 0.6009432800235525,
+       zSize: 0.9528423790083829,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.836880905468196, 0.7377112061158261, 0.03933878925226229],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.826973067817558, -8.49991042257669, 28.486215419859747],
+       xSize: 0.8118252139959994,
+       ySize: 0.8515563728733907,
+       zSize: 0.7886720570566504,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5826973067817558, 0.4249955211288345, 0.9495405139953249],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.401928984301254, -4.894154173799151, -23.923762105718843],
+       xSize: 0.9329380656047597,
+       ySize: 0.7351266841939312,
+       zSize: 0.6969887223116953,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5401928984301254, 0.24470770868995756, 0.7974587368572947],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.886132416180633, -13.923992245231567, 23.81412444084107],
+       xSize: 0.9649154317686218,
+       ySize: 0.6694266326728587,
+       zSize: 0.8174922168620454,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.4886132416180633, 0.6961996122615783, 0.7938041480280357],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.557743160664817, 7.183385793506744, 25.66586892647213],
+       xSize: 0.9077191645664371,
+       ySize: 0.9026795584231981,
+       zSize: 0.7465513676795514,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5557743160664816, 0.35916928967533723, 0.8555289642157377],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.406713409056401, 15.470706175502762, 3.54309644287094],
+       xSize: 0.9368313625666546,
+       ySize: 0.9859018750921077,
+       zSize: 0.6248408401458736,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8406713409056401, 0.7735353087751381, 0.11810321476236467],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.8581102478313127, -3.4946757217305517, -18.485067667608533],
+       xSize: 0.7314690153623326,
+       ySize: 0.6576326667147467,
+       zSize: 0.7098749711572759,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.18581102478313127, 0.1747337860865276, 0.6161689222536177],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.323337949662161, -11.797250931633897, 21.4916236708793],
+       xSize: 0.620784317326071,
+       ySize: 0.8486537855152293,
+       zSize: 0.7385190534156862,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5323337949662161, 0.5898625465816949, 0.7163874556959766],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.235474368865618, -5.935034718620056, 26.956779817072636],
+       xSize: 0.8636703916683395,
+       ySize: 0.8946844226131259,
+       zSize: 0.7045824833551183,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5235474368865618, 0.2967517359310028, 0.8985593272357545],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.494113011421426, -16.051358395364108, -5.282930781703403],
+       xSize: 0.8137853296755458,
+       ySize: 0.7459307297005493,
+       zSize: 0.9014227131485819,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5494113011421426, 0.8025679197682054, 0.17609769272344675],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.416360247239703, -17.830585101544216, 12.687623003205026],
+       xSize: 0.9211680104297538,
+       ySize: 0.6278706209909736,
+       zSize: 0.8823096758380784,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6416360247239703, 0.8915292550772108, 0.4229207667735009],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.839784720465667, 18.76997972119385, -18.54418849953888],
+       xSize: 0.8631709879898881,
+       ySize: 0.7937832137847831,
+       zSize: 0.664028569869898,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7839784720465668, 0.9384989860596924, 0.618139616651296],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.495791999959288, 0.1693318687444325, 27.423848271077027],
+       xSize: 0.9746351000957304,
+       ySize: 0.90940124538234,
+       zSize: 0.9135652433859474,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6495791999959288, 0.008466593437221625, 0.9141282757025676],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.579486707682177, 3.4350160120347866, -25.579741572915275],
+       xSize: 0.7975659566677265,
+       ySize: 0.6362206416995192,
+       zSize: 0.9417891817297761,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.2579486707682177, 0.17175080060173933, 0.8526580524305092],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.166926589278795, 4.8958832142190865, -18.09715636496303],
+       xSize: 0.9417942573368421,
+       ySize: 0.8283467497052828,
+       zSize: 0.7980538078637391,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7166926589278795, 0.24479416071095433, 0.6032385454987677],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.1395135751189054, 2.2116366231604054, -22.94208213452658],
+       xSize: 0.6979661394199635,
+       ySize: 0.6726594133621785,
+       zSize: 0.8267427173671535,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.21395135751189054, 0.11058183115802027, 0.7647360711508859],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.0708020094451456, -13.04164590625489, 6.320624857609431],
+       xSize: 0.8487783280725885,
+       ySize: 0.9314828057874535,
+       zSize: 0.8606500686253741,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.30708020094451455, 0.6520822953127445, 0.2106874952536477],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.219313231725554, 2.6271777545156283, -26.351966978925393],
+       xSize: 0.8846117246299183,
+       ySize: 0.6227705066030443,
+       zSize: 0.9927117326617416,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7219313231725554, 0.13135888772578141, 0.8783988992975131],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.901015418548564, -1.8667641188947712, -8.356786266446715],
+       xSize: 0.9444411574600344,
+       ySize: 0.7049672381431707,
+       zSize: 0.6025851008226392,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7901015418548564, 0.09333820594473856, 0.2785595422148905],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.6343126719404513, -9.519606291958663, -2.219246805790526],
+       xSize: 0.6965741664032923,
+       ySize: 0.6487519082170864,
+       zSize: 0.8594814752189592,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3634312671940451, 0.47598031459793316, 0.07397489352635087],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.783851664855815, -7.36899075407714, -14.319851206805524],
+       xSize: 0.9534712383289723,
+       ySize: 0.913265280964433,
+       zSize: 0.6017892261480619,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3783851664855815, 0.368449537703857, 0.47732837356018415],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.388000959139523, 1.6128508209011017, -9.70547594806272],
+       xSize: 0.8500998202792849,
+       ySize: 0.8774317720846807,
+       zSize: 0.7633859224037856,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6388000959139524, 0.08064254104505508, 0.323515864935424],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.656215049722938, 1.20048994093559, -11.63676561193568],
+       xSize: 0.9955384904316661,
+       ySize: 0.9720167995679829,
+       zSize: 0.6276122668572724,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.2656215049722938, 0.0600244970467795, 0.38789218706452266],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.3344375657535288, 12.086641307066365, 2.9136399556340677],
+       xSize: 0.9761416070915454,
+       ySize: 0.8120454073958654,
+       zSize: 0.9489875654729301,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.03344375657535288, 0.6043320653533183, 0.09712133185446893],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.812570501233852, 0.8980257265009897, 6.300215276978115],
+       xSize: 0.6596722081756348,
+       ySize: 0.8579755841744943,
+       zSize: 0.6602841871416304,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8812570501233852, 0.044901286325049486, 0.21000717589927048],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.237291584166883, 14.054306261019292, -19.254539464601123],
+       xSize: 0.7405623936539815,
+       ySize: 0.805556307266307,
+       zSize: 0.9969285177151378,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6237291584166883, 0.7027153130509646, 0.6418179821533708],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.820214443925342, -8.079923140513522, -24.437153116107865],
+       xSize: 0.6916328547685078,
+       ySize: 0.9232631341297702,
+       zSize: 0.9892991157500497,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.2820214443925342, 0.4039961570256761, 0.8145717705369289],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.739240091566833, 16.884969059193217, 4.123834670097487],
+       xSize: 0.9517756016716749,
+       ySize: 0.8471274713051664,
+       zSize: 0.9618484717707452,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3739240091566833, 0.8442484529596609, 0.13746115566991624],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.289353221386983, 9.850797382675147, -29.366416820582245],
+       xSize: 0.9568415494253799,
+       ySize: 0.9009216753557038,
+       zSize: 0.8355667028259774,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7289353221386983, 0.49253986913375736, 0.9788805606860749],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.958145705372678, 10.681671860946867, 7.376445079559026],
+       xSize: 0.6676238095508198,
+       ySize: 0.6480246558454338,
+       zSize: 0.748731997344625,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8958145705372678, 0.5340835930473433, 0.24588150265196754],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [4.921347235089792, -10.32385730684453, 24.688613266516064],
+       xSize: 0.6184444059596008,
+       ySize: 0.7634962180434728,
+       zSize: 0.6283805754121247,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.4921347235089792, 0.5161928653422265, 0.8229537755505355],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.6249860911280525, 13.759198234961708, -13.852163496342826],
+       xSize: 0.9678774060373245,
+       ySize: 0.7006644796431754,
+       zSize: 0.7469414589680837,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.26249860911280526, 0.6879599117480855, 0.46173878321142753],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.96984802046439, -3.823721318542823, -27.021268753637038],
+       xSize: 0.9521361181405715,
+       ySize: 0.8163091297859281,
+       zSize: 0.8777543376662258,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.896984802046439, 0.19118606592714116, 0.9007089584545679],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [4.770471560166289, -10.550565826809954, -19.72251815068298],
+       xSize: 0.6735466393262642,
+       ySize: 0.7621594579717298,
+       zSize: 0.6043341553720301,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.4770471560166289, 0.5275282913404977, 0.6574172716894326],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.877430898177231, 5.19780328151689, -22.220927266309168],
+       xSize: 0.6341524594606797,
+       ySize: 0.6012843460450998,
+       zSize: 0.6965237266839052,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7877430898177231, 0.25989016407584453, 0.7406975755436389],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.43806830905642, -2.174681037019198, 3.3097266697218473],
+       xSize: 0.8966058822331522,
+       ySize: 0.7370419707059488,
+       zSize: 0.760429718703069,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8438068309056421, 0.1087340518509599, 0.11032422232406157],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.5031767801452176, -15.839001406550167, 18.68911536264313],
+       xSize: 0.7487870893142817,
+       ySize: 0.6582867035124893,
+       zSize: 0.723473440017984,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.05031767801452176, 0.7919500703275084, 0.6229705120881043],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.8290534850336009, 0.8343412635802174, 11.764789864759628],
+       xSize: 0.6440204764991765,
+       ySize: 0.9043351569665331,
+       zSize: 0.7623306063559103,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1829053485033601, 0.041717063179010874, 0.3921596621586543],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.7850577675856005, 11.448124064854696, 6.683652130190197],
+       xSize: 0.8375375775142303,
+       ySize: 0.8909346723529323,
+       zSize: 0.99050174847035,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.67850577675856, 0.5724062032427348, 0.22278840433967323],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.3992069642017864, 1.4328798377687804, -0.1271076376224407],
+       xSize: 0.7940015918327266,
+       ySize: 0.9893135444886795,
+       zSize: 0.6433371803698245,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.33992069642017864, 0.07164399188843902, 0.004236921254081357],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.524576823008683, 10.503312137139801, -5.67330073936677],
+       xSize: 0.8140820940845787,
+       ySize: 0.8948927167098029,
+       zSize: 0.6940960482486259,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9524576823008684, 0.5251656068569901, 0.18911002464555898],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.4997482033511034, 11.366788882598694, -8.418844916446421],
+       xSize: 0.8690378616009766,
+       ySize: 0.6886497370490939,
+       zSize: 0.8044238793065024,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.34997482033511035, 0.5683394441299348, 0.2806281638815474],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [2.8113719641478507, -16.80644107524681, 25.05600929917003],
+       xSize: 0.9242501383608847,
+       ySize: 0.9021406902022022,
+       zSize: 0.6280464169774641,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.2811371964147851, 0.8403220537623405, 0.8352003099723343],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-9.50765750258326, 15.825404109586827, 7.990497131428789],
+       xSize: 0.685543290683982,
+       ySize: 0.7815037876291455,
+       zSize: 0.9189275967816009,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.950765750258326, 0.7912702054793413, 0.2663499043809596],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.734460037010233, 1.06469563080325, -21.211670625999353],
+       xSize: 0.8605731113740092,
+       ySize: 0.7354633842470312,
+       zSize: 0.9875333442005017,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7734460037010233, 0.0532347815401625, 0.7070556875333118],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.688501947501308, 17.177696508405774, 17.699344246726625],
+       xSize: 0.9540013788082242,
+       ySize: 0.7649334719088964,
+       zSize: 0.9877782682803508,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3688501947501308, 0.8588848254202887, 0.5899781415575541],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.4443976284622266, -9.347677996677639, -5.1922284481500505],
+       xSize: 0.6730096908200904,
+       ySize: 0.8603014937162307,
+       zSize: 0.9197238349944391,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.14443976284622267, 0.46738389983388196, 0.17307428160500168],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.100510505228137, 7.920798853737473, 25.683113051775237],
+       xSize: 0.866805703244163,
+       ySize: 0.7169560721726624,
+       zSize: 0.6018443235974259,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8100510505228137, 0.39603994268687365, 0.8561037683925079],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.8553325947456081, -7.729286988283182, -22.169370737622405],
+       xSize: 0.7677245944623697,
+       ySize: 0.7200136129155841,
+       zSize: 0.8168744066951295,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.08553325947456081, 0.3864643494141591, 0.7389790245874135],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.606439580733886, 2.6335823992226146, -26.06913859985085],
+       xSize: 0.6335381695018759,
+       ySize: 0.7709477683936248,
+       zSize: 0.786172060322437,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.4606439580733886, 0.13167911996113074, 0.868971286661695],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.079339817231741, -15.669956581471713, -29.67378559208673],
+       xSize: 0.7917009471513718,
+       ySize: 0.601014703590181,
+       zSize: 0.7051018806584016,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6079339817231741, 0.7834978290735857, 0.989126186402891],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-9.65005622735018, 1.161659654170407, -12.505923866899632],
+       xSize: 0.9595137875329314,
+       ySize: 0.6934661906026824,
+       zSize: 0.8001673858571532,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9650056227350181, 0.058082982708520345, 0.4168641288966544],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.794499881586525, 3.2219303114899205, -18.395016580259373],
+       xSize: 0.8465261368877591,
+       ySize: 0.940569246245533,
+       zSize: 0.953002185521725,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5794499881586525, 0.16109651557449603, 0.6131672193419792],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.105040567032972, 4.874216931271349, 5.933899709050138],
+       xSize: 0.9520690057154008,
+       ySize: 0.8005515806009211,
+       zSize: 0.7928426508611712,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9105040567032973, 0.24371084656356742, 0.19779665696833792],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.5119389742391682, -1.3002296393902846, 19.99466625789166],
+       xSize: 0.6804166924792182,
+       ySize: 0.7344781402023091,
+       zSize: 0.7562994320536578,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3511938974239168, 0.06501148196951423, 0.6664888752630553],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.744576376436938, 5.103586946651035, 14.547964340671001],
+       xSize: 0.7572249993801461,
+       ySize: 0.6673627875541952,
+       zSize: 0.7320517489614462,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.2744576376436938, 0.25517934733255176, 0.4849321446890334],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.15992591817269, 19.244713992211068, 23.315162157809233],
+       xSize: 0.6776711002338764,
+       ySize: 0.7287257931947074,
+       zSize: 0.9623941365700275,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8159925918172689, 0.9622356996105534, 0.7771720719269745],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.7252319840713177, 17.515893895241838, 24.91426992798104],
+       xSize: 0.6169116342865661,
+       ySize: 0.8122331029007648,
+       zSize: 0.8449361071148811,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3725231984071318, 0.8757946947620919, 0.8304756642660346],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.842633804337561, -8.854046472263054, -11.322320966035868],
+       xSize: 0.7894258944722969,
+       ySize: 0.6819589440369123,
+       zSize: 0.8200704620239472,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6842633804337561, 0.4427023236131527, 0.37741069886786227],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.749281375124424, 14.412649154770108, 8.471041857118799],
+       xSize: 0.6922924307239572,
+       ySize: 0.7238928784199739,
+       zSize: 0.8319129205586915,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7749281375124424, 0.7206324577385054, 0.28236806190395997],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.567829108614077, 19.61947615024127, -11.246219492901961],
+       xSize: 0.9184722727917137,
+       ySize: 0.7219313404084362,
+       zSize: 0.6329827580789499,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6567829108614077, 0.9809738075120634, 0.37487398309673203],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.0970795950082675, 13.561811252690596, -11.101260420291041],
+       xSize: 0.779104481618741,
+       ySize: 0.6720111831367536,
+       zSize: 0.8306234947031516,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6097079595008268, 0.6780905626345298, 0.3700420140097014],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-0.002985267260884328, -0.14275196011817926, 16.053931363904198],
+       xSize: 0.7859808103425321,
+       ySize: 0.9609691152968949,
+       zSize: 0.8303258510155204,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.0002985267260884328, 0.007137598005908963, 0.5351310454634732],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-0.8230775485495752, 1.2589596112370813, 27.061471176169704],
+       xSize: 0.8605721243211621,
+       ySize: 0.9528661239310161,
+       zSize: 0.8447842086672912,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.08230775485495752, 0.06294798056185406, 0.9020490392056568],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.154197193927411, -11.075028337586943, -23.672415359957647],
+       xSize: 0.9410631452996636,
+       ySize: 0.8509895961196282,
+       zSize: 0.7728948232046662,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6154197193927411, 0.5537514168793471, 0.7890805119985882],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-5.650423450731767, 14.457118269904583, -18.27506185240188],
+       xSize: 0.8229696793176171,
+       ySize: 0.885388902453732,
+       zSize: 0.6324403708854904,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5650423450731767, 0.7228559134952292, 0.609168728413396],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.3823691719436244, 7.59533501636815, 17.10252909641646],
+       xSize: 0.6538327644794968,
+       ySize: 0.998504810843664,
+       zSize: 0.9057622172147906,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.33823691719436244, 0.3797667508184075, 0.570084303213882],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.849137163192287, -12.665313421680576, -10.631918474058104],
+       xSize: 0.9784739872413396,
+       ySize: 0.8363575844382729,
+       zSize: 0.7012666809406252,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8849137163192287, 0.6332656710840288, 0.35439728246860347],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-9.39021535330927, -19.683161717380493, 4.253541387618448],
+       xSize: 0.6108861939653953,
+       ySize: 0.9796600536868209,
+       zSize: 0.8430217094313076,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9390215353309269, 0.9841580858690246, 0.14178471292061492],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.877112021046983, 8.87662556472447, -17.130008958503705],
+       xSize: 0.9954838525650178,
+       ySize: 0.7126916862777962,
+       zSize: 0.9445299560320491,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6877112021046983, 0.44383127823622354, 0.5710002986167901],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-0.21819787719874384, -8.832075901309452, 20.371661799801018],
+       xSize: 0.8070681562138589,
+       ySize: 0.8415163987845341,
+       zSize: 0.9417850161258345,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.021819787719874383, 0.4416037950654726, 0.6790553933267006],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.462746233376585, 7.484038830331542, 16.652126783051173],
+       xSize: 0.6255288085292696,
+       ySize: 0.9683265180105851,
+       zSize: 0.9796876922068916,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7462746233376585, 0.3742019415165771, 0.5550708927683724],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.570523223383211, 9.012422897013792, 9.853161578058163],
+       xSize: 0.8545626681999839,
+       ySize: 0.7301265635497036,
+       zSize: 0.9095993152823247,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6570523223383211, 0.4506211448506896, 0.32843871926860546],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.362659266536092, -19.44132867273717, 18.432931481387534],
+       xSize: 0.9595162074227384,
+       ySize: 0.8508077570909276,
+       zSize: 0.7127483686076652,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8362659266536092, 0.9720664336368585, 0.6144310493795845],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.9056586842217555, -2.4624675145712196, -14.10631419706533],
+       xSize: 0.9130087105790254,
+       ySize: 0.624469428833884,
+       zSize: 0.6608574049783725,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.19056586842217554, 0.12312337572856098, 0.470210473235511],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.636646492955883, 11.312815185002975, 12.000405291182489],
+       xSize: 0.9533525080695553,
+       ySize: 0.9439867160655112,
+       zSize: 0.8898253901988114,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9636646492955883, 0.5656407592501488, 0.40001350970608296],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.952618121082743, -7.4642783699776505, -11.432312977144893],
+       xSize: 0.8275386247706294,
+       ySize: 0.671507479750844,
+       zSize: 0.7639834642054658,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5952618121082743, 0.3732139184988825, 0.3810770992381631],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [5.321769096856311, -6.20098570034294, 1.6849206438153637],
+       xSize: 0.7429188948032017,
+       ySize: 0.9336344452019386,
+       zSize: 0.8554923782097326,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.5321769096856311, 0.310049285017147, 0.05616402146051212],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.1503376521958906, 10.144173014645538, 27.715621320161006],
+       xSize: 0.7360873896783986,
+       ySize: 0.8346606754695718,
+       zSize: 0.7606344647110925,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.31503376521958903, 0.5072086507322769, 0.9238540440053669],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.067745212841917, 6.868025465314076, 26.71132842960342],
+       xSize: 0.7051049154317336,
+       ySize: 0.8703018413891674,
+       zSize: 0.9281898327710334,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1067745212841917, 0.3434012732657038, 0.890377614320114],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [4.444010565283026, -0.7682205686084203, -29.323012638435245],
+       xSize: 0.6670962011278012,
+       ySize: 0.9405294128180317,
+       zSize: 0.6431179687031598,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.44440105652830264, 0.03841102843042101, 0.9774337546145081],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.088511800041232, -16.823919510092658, 10.534693447061272],
+       xSize: 0.8774867954116145,
+       ySize: 0.9814418024415008,
+       zSize: 0.827865478232174,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9088511800041232, 0.8411959755046329, 0.35115644823537573],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.669140638378533, 17.85347460787993, 24.64693204735645],
+       xSize: 0.8923960822204394,
+       ySize: 0.684475516230884,
+       zSize: 0.6462465326064991,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6669140638378532, 0.8926737303939966, 0.8215644015785484],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.861947047732043, -15.135934490967626, 15.310057113559743],
+       xSize: 0.7883207944494603,
+       ySize: 0.6535387685434889,
+       zSize: 0.9582473060140363,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.0861947047732043, 0.7567967245483813, 0.5103352371186581],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.9675139801582393, -16.13664294154759, 8.298685940698192],
+       xSize: 0.8142266789504177,
+       ySize: 0.8964008910785985,
+       zSize: 0.6409985408010765,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.39675139801582393, 0.8068321470773794, 0.27662286468993974],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.070377547020556, 1.7524982822161093, 20.967988354033167],
+       xSize: 0.743419298262558,
+       ySize: 0.9444525143460644,
+       zSize: 0.7082312419731757,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9070377547020556, 0.08762491411080546, 0.6989329451344389],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.20087651727747513, 4.59535849388535, -21.072479182752048],
+       xSize: 0.6162521967309544,
+       ySize: 0.9550378442445826,
+       zSize: 0.6379207527017873,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.020087651727747513, 0.2297679246942675, 0.7024159727584016],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.886381783599966, -1.2782894780489862, -23.315342245964118],
+       xSize: 0.9382474684778348,
+       ySize: 0.7707952776909648,
+       zSize: 0.6106430102499666,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6886381783599966, 0.06391447390244931, 0.7771780748654706],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.64996135949361, -10.36527117655913, 1.4946171198981126],
+       xSize: 0.947728030519201,
+       ySize: 0.8872670147083204,
+       zSize: 0.9947973021841228,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.864996135949361, 0.5182635588279565, 0.04982057066327042],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.4827674614648352, 9.649768672886921, -29.899878246373902],
+       xSize: 0.6279635456756459,
+       ySize: 0.8145300490115956,
+       zSize: 0.8962540474967751,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1482767461464835, 0.48248843364434607, 0.9966626082124634],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.2593881186385882, 14.393674862273386, -18.786086303686407],
+       xSize: 0.8868591586697043,
+       ySize: 0.7549050529281387,
+       zSize: 0.920649370593531,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3259388118638588, 0.7196837431136693, 0.6262028767895469],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.198060175104988, -15.650634298281805, -16.49024099182753],
+       xSize: 0.8947275428093273,
+       ySize: 0.7488682692199666,
+       zSize: 0.7986213752079584,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7198060175104988, 0.7825317149140902, 0.5496746997275843],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.21358048604628088, 16.70938947963169, 13.471074748552788],
+       xSize: 0.7437402256658101,
+       ySize: 0.9123808105881288,
+       zSize: 0.628830262452106,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.021358048604628088, 0.8354694739815844, 0.4490358249517596],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [9.216934201369721, -11.691406979516978, 22.731820183860158],
+       xSize: 0.6712630665299849,
+       ySize: 0.7800805295915573,
+       zSize: 0.8801359851209741,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9216934201369721, 0.5845703489758489, 0.7577273394620053],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-4.614922531819207, -4.411162804975204, 4.792680719353662],
+       xSize: 0.7345738966123065,
+       ySize: 0.7341416406392811,
+       zSize: 0.7454900558959145,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.4614922531819207, 0.2205581402487602, 0.1597560239784554],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.1374232914010527, -10.553391233787854, 0.5533680945401684],
+       xSize: 0.8106956444015303,
+       ySize: 0.6453568828649516,
+       zSize: 0.9423850386424913,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.21374232914010527, 0.5276695616893927, 0.01844560315133895],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [0.3860319150936853, 8.893177293592942, 21.100889842077933],
+       xSize: 0.6358439933691455,
+       ySize: 0.8177391227795499,
+       zSize: 0.7113919494830929,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.03860319150936853, 0.4446588646796471, 0.7033629947359311],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-0.3685917073641818, 8.039057834775324, -26.249334710929507],
+       xSize: 0.8792278888188818,
+       ySize: 0.9526081351731389,
+       zSize: 0.8628896154242525,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.03685917073641818, 0.4019528917387662, 0.8749778236976502],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.04351478104058, -14.609143396999652, -7.105682807079621],
+       xSize: 0.6192956799952319,
+       ySize: 0.9666254916079193,
+       zSize: 0.7076351315480862,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.304351478104058, 0.7304571698499827, 0.2368560935693207],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.893493447037551, 3.5133832113401695, -26.589642105935212],
+       xSize: 0.6286293927913169,
+       ySize: 0.6912728144674929,
+       zSize: 0.6209001333142999,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6893493447037551, 0.1756691605670085, 0.8863214035311737],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-7.738626672872138, 16.396472791297093, 16.666672011967137],
+       xSize: 0.7499919867628875,
+       ySize: 0.8417423931108272,
+       zSize: 0.9890767289210548,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7738626672872138, 0.8198236395648546, 0.5555557337322379],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.2963197450871426, -3.9940506752126055, 4.821213865627563],
+       xSize: 0.8180538643498043,
+       ySize: 0.8010351502815919,
+       zSize: 0.780466323612985,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.22963197450871425, 0.19970253376063027, 0.1607071288542521],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [1.102918055770628, 3.9435555289433495, -19.088180959375187],
+       xSize: 0.678957522455123,
+       ySize: 0.7935993180118318,
+       zSize: 0.6639344034264582,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1102918055770628, 0.19717777644716747, 0.6362726986458396],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.724444991243987, -2.158235988221481, 11.365358984850936],
+       xSize: 0.8113866263065054,
+       ySize: 0.8701346371504928,
+       zSize: 0.6272105960208172,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8724444991243987, 0.10791179941107405, 0.3788452994950312],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.3597745667877028, -12.149646096771693, 26.783592084470556],
+       xSize: 0.7265839978347368,
+       ySize: 0.703720864906111,
+       zSize: 0.6393624173130973,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.1359774566787703, 0.6074823048385847, 0.8927864028156852],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-1.8155990674683977, 10.186299593196296, -28.31423954660783],
+       xSize: 0.9980892132423873,
+       ySize: 0.6231727842708625,
+       zSize: 0.9069269354945244,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.18155990674683978, 0.5093149796598148, 0.9438079848869276],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.59068945553933, -6.7485687885429435, 22.63836006351601],
+       xSize: 0.7648246882552864,
+       ySize: 0.9428452788964995,
+       zSize: 0.7678339434042807,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.859068945553933, 0.3374284394271472, 0.7546120021172004],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [6.675197840651759, -18.47188474014252, -10.478856428938006],
+       xSize: 0.8167324863872513,
+       ySize: 0.9073951607722287,
+       zSize: 0.6559951982204155,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6675197840651759, 0.9235942370071261, 0.34929521429793353],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.28246750809147, -19.63973731346536, 11.68573180983676],
+       xSize: 0.6295931969609553,
+       ySize: 0.6724422981817676,
+       zSize: 0.7946285799048649,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6282467508091469, 0.981986865673268, 0.3895243936612253],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.883886812319874, -17.110057104672002, 17.296692969581635],
+       xSize: 0.882015004644761,
+       ySize: 0.8163613529023473,
+       zSize: 0.9011609985174366,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3883886812319874, 0.8555028552336001, 0.5765564323193878],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.089756482618149, -10.087703563249985, -25.122358166249334],
+       xSize: 0.982362550966235,
+       ySize: 0.8216733349471139,
+       zSize: 0.7353662286295602,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6089756482618149, 0.5043851781624993, 0.8374119388749778],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [3.939849475710453, -2.2856655785910185, 26.23508521112646],
+       xSize: 0.6718253484765132,
+       ySize: 0.7687614306430443,
+       zSize: 0.8825387448685473,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.3939849475710453, 0.11428327892955092, 0.874502840370882],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-9.358836628943177, -7.1821049040485505, -25.29083011373583],
+       xSize: 0.8145039675001493,
+       ySize: 0.729572242554658,
+       zSize: 0.8590583713996218,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.9358836628943177, 0.35910524520242754, 0.843027670457861],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [8.596331558520404, -8.244745728839359, 17.193915583656597],
+       xSize: 0.8344636710914572,
+       ySize: 0.8267781223217023,
+       zSize: 0.8328339190470938,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.8596331558520405, 0.41223728644196794, 0.5731305194552199],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-8.32257976203256, 1.9683825712610528, 26.289623899049815],
+       xSize: 0.7285343505415245,
+       ySize: 0.7853586573189373,
+       zSize: 0.9246538740248198,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.832257976203256, 0.09841912856305264, 0.8763207966349938],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-6.870817820208499, -18.197008886037757, 23.02294855365148],
+       xSize: 0.781969631579928,
+       ySize: 0.8026252928976705,
+       zSize: 0.7943082218432274,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.6870817820208499, 0.9098504443018879, 0.7674316184550494],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [7.3608827210031045, 3.0977147392468076, -17.654051541832175],
+       xSize: 0.7202746800923924,
+       ySize: 0.7666706048604544,
+       zSize: 0.753941306582406,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.7360882721003105, 0.15488573696234037, 0.5884683847277391],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-2.5679111943717796, -4.026227006264582, 19.697558968026144],
+       xSize: 0.9787448272161118,
+       ySize: 0.9090848908239292,
+       zSize: 0.8243921983539148,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.256791119437178, 0.2013113503132291, 0.6565852989342048],
+   })});
+new Mesh(viewer.scene,{
+   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({
+       center: [-3.5338544488891515, 2.274591974483492, 16.853293360005836],
+       xSize: 0.8884577938203779,
+       ySize: 0.6244591886523045,
+       zSize: 0.768122494298221,
+   })),
+   material: new PhongMaterial(viewer.scene, {
+       diffuse: [0.35338544488891516, 0.11372959872417461, 0.5617764453335279],
+   })});
+
+</script>
+</html>

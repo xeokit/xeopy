@@ -48,7 +48,11 @@ class Xeokit:
     def create(self):
         script = ""
         for i in self.content:
-            script += str(i) + "\n"
+            if isinstance(i, list):
+                for j in i:
+                    script += str(j) + "\n"
+            else:
+                script += str(i) + "\n"
         return self.header + self.__create_xeokit_modules_import() + self.__create_additional_imports() + script + self.footer
 
     def create_and_save(self):
@@ -60,8 +64,13 @@ class Xeokit:
     def __create_xeokit_modules_import(self):
         libraries_needed = set()
         for i in self.content:
-            for j in i.get_xeokit_modules_needed():
-                libraries_needed.add(j)
+            if isinstance(i, list):
+                for j in i:
+                    for k in j.get_xeokit_modules_needed():
+                        libraries_needed.add(k)
+            else:
+                for j in i.get_xeokit_modules_needed():
+                    libraries_needed.add(j)
         return "import " + str(libraries_needed).replace("'", "") + """ from
                 "https://cdn.jsdelivr.net/npm/@xeokit/xeokit-sdk/dist/xeokit-sdk.es.min.js";
 """
@@ -69,8 +78,13 @@ class Xeokit:
     def __create_additional_imports(self):
         imports_needed = set()
         for i in self.content:
-            for j in i.get_additional_imports():
-                imports_needed.add(j)
+            if isinstance(i, list):
+                for j in i:
+                    for k in j.get_additional_imports():
+                        imports_needed.add(k)
+            else:
+                for j in i.get_additional_imports():
+                    imports_needed.add(j)
         imports_string = ""
         for i in imports_needed:
             imports_string += i + "\n"

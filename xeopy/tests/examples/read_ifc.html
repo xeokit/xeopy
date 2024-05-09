@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>xeokit Example</title>
+    <style>
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            user-select: none;
+        }
+
+        #xeokit_canvas {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: lightblue;
+            background-image: linear-gradient(lightblue, white);
+        }
+    </style>
+</head>
+<body>
+<canvas id="xeokit_canvas"></canvas>
+</body>
+<script id="source" type="module">
+import {Viewer, WebIFCLoaderPlugin} from
+                "https://cdn.jsdelivr.net/npm/@xeokit/xeokit-sdk/dist/xeokit-sdk.es.min.js";
+import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";
+const viewer = new Viewer({
+    canvasId: "xeokit_canvas",
+    transparent: true,
+    dtxEnabled: true
+});
+viewer.camera.eye = + [-3.933, 2.855, 27.018];
+viewer.camera.look = + [4.4, 3.724, 8.899];
+viewer.camera.up = + [-0.018, 0.999, 0.039];
+
+
+    const IfcAPI = new WebIFC.IfcAPI();
+    IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");
+
+    IfcAPI.Init().then(() => {
+        const ifcLoader = new WebIFCLoaderPlugin(viewer, {
+            WebIFC,
+            IfcAPI
+        });
+
+        const model = ifcLoader.load({
+            src: "Duplex.ifc",
+            edges: true
+        });
+    });
+
+
+</script>
+</html>
