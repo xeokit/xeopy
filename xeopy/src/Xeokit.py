@@ -1,5 +1,4 @@
 from xeopy import *
-import webbrowser
 
 
 class Xeokit:
@@ -44,12 +43,19 @@ class Xeokit:
         self.header = kwargs["header"]
         self.content = kwargs["content"]
         self.footer = kwargs["footer"]
+        self.file_path = kwargs["file_path"]
 
     def create(self):
         script = ""
         for i in self.content:
             script += str(i) + "\n"
         return self.header + self.__create_xeokit_modules_import() + self.__create_additional_imports() + script + self.footer
+
+    def create_and_save(self):
+        xeokit_content = self.create()
+        f = open(self.file_path, "w")
+        f.write(xeokit_content)
+        f.close()
 
     def __create_xeokit_modules_import(self):
         libraries_needed = set()

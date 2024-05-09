@@ -2,11 +2,6 @@ import pytest
 from xeopy import *
 
 
-def test_create():
-    xeokit = Xeokit(content=[Viewer(), CameraSettings(), IfcLoader(path="Duplex.ifc")])
-    actual = xeokit.create()
-    f = open("actual_created.html", "w")
-    f.write(actual)
-    f.close()
-    expected = """"""
-    assert actual == expected
+def test_run():
+    xeokit = Xeokit(content=[Viewer(), CameraSettings(), IfcLoader(path="Duplex.ifc")], file_path="actual_created.html")
+    xeokit.create_and_save()
