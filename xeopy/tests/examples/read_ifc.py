@@ -1,4 +1,11 @@
 from xeopy import *
 
-xeokit = Xeokit(content=[Viewer(), CameraSettings(), IfcLoader(path="Duplex.ifc")], file_path="read_ifc.html")
+content = []
+
+content.append(Viewer())
+content.append(CameraSettings())
+content.append(IfcLoader(path="IfcOpenHouse2x3.ifc"))
+
+xeokit = Xeokit(content=content, file_path="read_ifc.html")
+
 xeokit.create_and_save()

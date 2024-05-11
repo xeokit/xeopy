@@ -26,7 +26,7 @@
 <canvas id="xeokit_canvas"></canvas>
 </body>
 <script id="source" type="module">
-import {Viewer, WebIFCLoaderPlugin} from
+import {WebIFCLoaderPlugin, Viewer} from
                 "https://cdn.jsdelivr.net/npm/@xeokit/xeokit-sdk/dist/xeokit-sdk.es.min.js";
 import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";
 const viewer = new Viewer({
@@ -49,7 +49,7 @@ viewer.camera.up = + [-0.018, 0.999, 0.039];
         });
 
         const model = ifcLoader.load({
-            src: "Duplex.ifc",
+            src: "IfcOpenHouse2x3.ifc",
             edges: true
         });
     });
