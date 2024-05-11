@@ -21,16 +21,21 @@ def test_init_all_filled():
 def test_str():
     ifcLoader = IfcLoader()
 
-    assert ifcLoader.__str__() == """
-    const webIFCLoader = new WebIFCLoaderPlugin(viewer, {
-        wasmPath: "https://cdn.jsdelivr.net/npm/@xeokit/xeokit-sdk/dist/"
-    });
-
-    const model = webIFCLoader.load({
-        src: \"Duplex.ifc\",
-        edges: true
-    });
-"""
+    assert ifcLoader.__str__() == ('\n'
+ '    const IfcAPI = new WebIFC.IfcAPI();\n'
+ '    IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");\n'
+ '\n'
+ '    IfcAPI.Init().then(() => {\n'
+ '        const ifcLoader = new WebIFCLoaderPlugin(viewer, {\n'
+ '            WebIFC,\n'
+ '            IfcAPI\n'
+ '        });\n'
+ '\n'
+ '        const model = ifcLoader.load({\n'
+ '            src: "Duplex.ifc",\n'
+ '            edges: true\n'
+ '        });\n'
+ '    });\n')
 
 
 def test_get_xeokit_modules_needed():

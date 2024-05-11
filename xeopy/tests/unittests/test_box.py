@@ -25,6 +25,21 @@ def test_init_all_filled():
     assert box.viewer_id == "another_viewer"
 
 
+def test_str():
+    box = Box()
+
+    assert box.__str__() == ('new Mesh(viewer.scene,{\n'
+ '   geometry: new ReadableGeometry(viewer.scene, buildBoxGeometry({\n'
+ '       center: [0.0, 0.0, 0.0],\n'
+ '       xSize: 1.0,\n'
+ '       ySize: 1.0,\n'
+ '       zSize: 1.0,\n'
+ '   })),\n'
+ '   material: new PhongMaterial(viewer.scene, {\n'
+ '       diffuse: [0.0, 0.0, 0.0],\n'
+ '   })});')
+
+
 def test_get_xeokit_modules_needed():
     box = Box()
 
