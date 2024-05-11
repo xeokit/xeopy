@@ -38,6 +38,12 @@ def test_str():
  '    });\n')
 
 
+def test_get_additional_imports():
+    ifcLoader = IfcLoader()
+
+    assert ifcLoader.get_additional_imports() == {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
+
+
 def test_get_xeokit_modules_needed():
     ifcLoader = IfcLoader()
 

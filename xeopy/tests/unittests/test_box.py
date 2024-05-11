@@ -40,6 +40,12 @@ def test_str():
  '   })});')
 
 
+def test_get_additional_imports():
+    box = Box()
+
+    assert box.get_additional_imports() == {}
+
+
 def test_get_xeokit_modules_needed():
     box = Box()
 

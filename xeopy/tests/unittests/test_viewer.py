@@ -30,6 +30,12 @@ def test_str():
 });"""
 
 
+def test_get_additional_imports():
+    viewer = Viewer()
+
+    assert viewer.get_additional_imports() == {}
+
+
 def test_get_xeokit_modules_needed():
     viewer = Viewer()
 
