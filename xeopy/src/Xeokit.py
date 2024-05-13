@@ -3,8 +3,32 @@ from xeopy import *
 
 class Xeokit:
     def __init__(self, **kwargs):
-        default_kwargs = {
-            "header": """<!doctype html>
+        self.content = kwargs["content"]
+        self.file_path = kwargs["file_path"]
+
+    def create(self):
+        script = ""
+        for i in self.content:
+            if isinstance(i, list):
+                for j in i:
+                    script += str(j) + "\n"
+            else:
+                script += str(i) + "\n"
+
+        return self.__create_header() +\
+            self.__create_xeokit_modules_import() +\
+            self.__create_additional_imports() +\
+            script +\
+            self.__create_footer()
+
+    def create_and_save(self):
+        xeokit_content = self.create()
+        f = open(self.file_path, "w")
+        f.write(xeokit_content)
+        f.close()
+
+    def __create_header(self):
+        return """<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -32,34 +56,13 @@ class Xeokit:
 <canvas id="xeokit_canvas"></canvas>
 </body>
 <script id="source" type="module">
-""",
-            "content": [Viewer(), CameraSettings()],
-            "footer": """
+"""
+
+    def __create_footer(self):
+        return """
 </script>
 </html>
-""",
-        }
-        kwargs = default_kwargs | kwargs
-        self.header = kwargs["header"]
-        self.content = kwargs["content"]
-        self.footer = kwargs["footer"]
-        self.file_path = kwargs["file_path"]
-
-    def create(self):
-        script = ""
-        for i in self.content:
-            if isinstance(i, list):
-                for j in i:
-                    script += str(j) + "\n"
-            else:
-                script += str(i) + "\n"
-        return self.header + self.__create_xeokit_modules_import() + self.__create_additional_imports() + script + self.footer
-
-    def create_and_save(self):
-        xeokit_content = self.create()
-        f = open(self.file_path, "w")
-        f.write(xeokit_content)
-        f.close()
+"""
 
     def __create_xeokit_modules_import(self):
         libraries_needed = set()
