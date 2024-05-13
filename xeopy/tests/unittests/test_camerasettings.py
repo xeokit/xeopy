@@ -30,6 +30,12 @@ viewer.camera.up = + [-0.018, 0.999, 0.039];
 """
 
 
+def test_get_additional_styles():
+    camera_settings = CameraSettings()
+
+    assert camera_settings.get_additional_styles() == {}
+
+
 def test_get_additional_imports():
     camera_settings = CameraSettings()
 

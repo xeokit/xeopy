@@ -40,6 +40,12 @@ def test_str():
  '   })});')
 
 
+def test_get_additional_styles():
+    box = Box()
+
+    assert box.get_additional_styles() == {}
+
+
 def test_get_additional_imports():
     box = Box()
 

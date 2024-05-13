@@ -38,6 +38,12 @@ def test_str():
  '    });\n')
 
 
+def test_get_additional_styles():
+    ifcLoader = IfcLoader()
+
+    assert ifcLoader.get_additional_styles() == {}
+
+
 def test_get_additional_imports():
     ifcLoader = IfcLoader()
 

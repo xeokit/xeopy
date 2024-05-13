@@ -30,6 +30,12 @@ def test_str():
 });"""
 
 
+def test_get_additional_styles():
+    viewer = Viewer()
+
+    assert viewer.get_additional_styles() == {}
+
+
 def test_get_additional_imports():
     viewer = Viewer()
 

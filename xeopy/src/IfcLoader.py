@@ -25,6 +25,10 @@ class IfcLoader:
 """
 
     @staticmethod
+    def get_additional_styles():
+        return {}
+
+    @staticmethod
     def get_additional_imports():
         return {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
 

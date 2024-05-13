@@ -29,6 +29,10 @@ class Box:
                         "});"])
 
     @staticmethod
+    def get_additional_styles():
+        return {}
+
+    @staticmethod
     def get_additional_imports():
         return {}
 
