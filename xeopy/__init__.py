@@ -3,3 +3,4 @@ from xeopy.src.CameraSettings import *
 from xeopy.src.Xeokit import *
 from xeopy.src.IfcLoader import *
 from xeopy.src.Box import *
+from xeopy.src.SceneModelOnLoaded import *
