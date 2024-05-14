@@ -1,8 +1,9 @@
 class IfcLoader:
     def __init__(self, **kwargs):
-        default_kwargs = {"path": "Duplex.ifc", "edges": True, "viewer_id": "viewer"}
+        default_kwargs = {"path": "Duplex.ifc", "edges": True, "viewer_id": "viewer", "scene_model_id": "sceneModel"}
         kwargs = default_kwargs | kwargs
         self.viewer_id = kwargs["viewer_id"]
+        self.scene_model_id = kwargs["scene_model_id"]
         self.path = kwargs["path"]
         self.edges = kwargs["edges"]
 
@@ -17,7 +18,7 @@ class IfcLoader:
             IfcAPI
         });
 
-        const model = ifcLoader.load({
+        const """ + self.scene_model_id + """ = ifcLoader.load({
             src: \"""" + self.path + """\",
             edges: """ + str(self.edges).lower() + """
         });

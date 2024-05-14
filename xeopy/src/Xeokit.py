@@ -29,6 +29,11 @@ class Xeokit:
         f.close()
 
     def __create_header(self):
+        additional_styles = TextTools.merge_taken_tuples_to_set(self.content, "get_additional_styles")
+        additional_styles_string = ""
+        for i in additional_styles:
+            additional_styles_string += i + "\n\n"
+
         return """<!doctype html>
 <html>
 <head>
@@ -50,6 +55,7 @@ class Xeokit:
             position: absolute;
             background: lightblue;
             background-image: linear-gradient(lightblue, white);
+            """ + additional_styles_string + """
         }
     </style>
 </head>

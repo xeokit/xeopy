@@ -3,25 +3,27 @@ from xeopy import IfcLoader
 
 
 def test_init_default():
-    ifcLoader = IfcLoader()
+    ifc_loader = IfcLoader()
 
-    assert ifcLoader.path == "Duplex.ifc"
-    assert ifcLoader.edges is True
-    assert ifcLoader.viewer_id == "viewer"
+    assert ifc_loader.path == "Duplex.ifc"
+    assert ifc_loader.edges is True
+    assert ifc_loader.viewer_id == "viewer"
+    assert ifc_loader.scene_model_id == "sceneModel"
 
 
 def test_init_all_filled():
-    ifcLoader = IfcLoader(path="IfcOpenHouse2x3.ifc", edges=False, viewer_id="another_viewer")
+    ifc_loader = IfcLoader(path="IfcOpenHouse2x3.ifc", edges=False, viewer_id="another_viewer", scene_model_id="another_scene_model_id")
 
-    assert ifcLoader.path == "IfcOpenHouse2x3.ifc"
-    assert ifcLoader.edges is False
-    assert ifcLoader.viewer_id == "another_viewer"
+    assert ifc_loader.path == "IfcOpenHouse2x3.ifc"
+    assert ifc_loader.edges is False
+    assert ifc_loader.viewer_id == "another_viewer"
+    assert ifc_loader.scene_model_id == "another_scene_model_id"
 
 
 def test_str():
-    ifcLoader = IfcLoader()
+    ifc_loader = IfcLoader()
 
-    assert ifcLoader.__str__() == ('\n'
+    assert ifc_loader.__str__() == ('\n'
  '    const IfcAPI = new WebIFC.IfcAPI();\n'
  '    IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");\n'
  '\n'
@@ -31,7 +33,7 @@ def test_str():
  '            IfcAPI\n'
  '        });\n'
  '\n'
- '        const model = ifcLoader.load({\n'
+ '        const sceneModel = ifcLoader.load({\n'
  '            src: "Duplex.ifc",\n'
  '            edges: true\n'
  '        });\n'
@@ -39,18 +41,18 @@ def test_str():
 
 
 def test_get_additional_styles():
-    ifcLoader = IfcLoader()
+    ifc_loader = IfcLoader()
 
-    assert ifcLoader.get_additional_styles() == {}
+    assert ifc_loader.get_additional_styles() == {}
 
 
 def test_get_additional_imports():
-    ifcLoader = IfcLoader()
+    ifc_loader = IfcLoader()
 
-    assert ifcLoader.get_additional_imports() == {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
+    assert ifc_loader.get_additional_imports() == {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
 
 
 def test_get_xeokit_modules_needed():
-    ifcLoader = IfcLoader()
+    ifc_loader = IfcLoader()
 
-    assert ifcLoader.get_xeokit_modules_needed() == {"WebIFCLoaderPlugin"}
+    assert ifc_loader.get_xeokit_modules_needed() == {"WebIFCLoaderPlugin"}
