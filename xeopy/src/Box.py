@@ -28,8 +28,7 @@ class Box:
                         "   })",
                         "});"])
 
-    @staticmethod
-    def get_additional_styles():
+    def get_additional_styles(self):
         return {}
 
     @staticmethod

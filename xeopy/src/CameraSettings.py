@@ -13,8 +13,7 @@ class CameraSettings:
                         self.viewer_id, ".camera.look = + ", str(self.look), ";\n",
                         self.viewer_id, ".camera.up = + ", str(self.up), ";\n"])
 
-    @staticmethod
-    def get_additional_styles():
+    def get_additional_styles(self):
         return {}
 
     @staticmethod

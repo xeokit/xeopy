@@ -4,3 +4,4 @@ from xeopy.src.Xeokit import *
 from xeopy.src.IfcLoader import *
 from xeopy.src.Box import *
 from xeopy.src.SceneModelOnLoaded import *
+from xeopy.src.SectionPlanesPlugin import *
