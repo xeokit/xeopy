@@ -1,4 +1,4 @@
-# xeopy = Xeokit + Python (alpha stage)
+# xeopy = Xeokit + Python (Proof of concept, work in progress project)
 
 ## Description
 
@@ -6,11 +6,14 @@ xeopy is a library which allows to create Xeokit scenes using Python.
 
 ## Features
 
-Right now you can control:
+Right now you can control some things regarding:
 - [x] Box
 - [x] CameraSettings
-- [x] IfcLoader
+- [x] WebIFCLoaderPlugin
 - [x] Viewer
+- [x] SectionPlanes
+- [ ] SceneModel
+- [ ] MetaModel
 
 I'm open to hear suggestion regarding what should be added. Please open an issue here and let me know! :)
 

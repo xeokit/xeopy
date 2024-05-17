@@ -1,4 +1,4 @@
-class IfcLoader:
+class WebIFCLoaderPlugin:
     def __init__(self, **kwargs):
         default_kwargs = {"path": "Duplex.ifc", "edges": True, "viewer_id": "viewer", "scene_model_id": "sceneModel"}
         kwargs = default_kwargs | kwargs

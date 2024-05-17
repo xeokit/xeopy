@@ -1,9 +1,9 @@
 import pytest
-from xeopy import IfcLoader
+from xeopy import WebIFCLoaderPlugin
 
 
 def test_init_default():
-    ifc_loader = IfcLoader()
+    ifc_loader = WebIFCLoaderPlugin()
 
     assert ifc_loader.path == "Duplex.ifc"
     assert ifc_loader.edges is True
@@ -12,7 +12,7 @@ def test_init_default():
 
 
 def test_init_all_filled():
-    ifc_loader = IfcLoader(path="IfcOpenHouse2x3.ifc", edges=False, viewer_id="another_viewer", scene_model_id="another_scene_model_id")
+    ifc_loader = WebIFCLoaderPlugin(path="IfcOpenHouse2x3.ifc", edges=False, viewer_id="another_viewer", scene_model_id="another_scene_model_id")
 
     assert ifc_loader.path == "IfcOpenHouse2x3.ifc"
     assert ifc_loader.edges is False
@@ -21,7 +21,7 @@ def test_init_all_filled():
 
 
 def test_str():
-    ifc_loader = IfcLoader()
+    ifc_loader = WebIFCLoaderPlugin()
 
     assert ifc_loader.__str__() == ('\n'
  '    const IfcAPI = new WebIFC.IfcAPI();\n'
@@ -41,18 +41,18 @@ def test_str():
 
 
 def test_get_additional_styles():
-    ifc_loader = IfcLoader()
+    ifc_loader = WebIFCLoaderPlugin()
 
     assert ifc_loader.get_additional_styles() == {}
 
 
 def test_get_additional_imports():
-    ifc_loader = IfcLoader()
+    ifc_loader = WebIFCLoaderPlugin()
 
     assert ifc_loader.get_additional_imports() == {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
 
 
 def test_get_xeokit_modules_needed():
-    ifc_loader = IfcLoader()
+    ifc_loader = WebIFCLoaderPlugin()
 
     assert ifc_loader.get_xeokit_modules_needed() == {"WebIFCLoaderPlugin"}
