@@ -7,17 +7,20 @@ def test_init_default():
 
     assert ifc_loader.path == "Duplex.ifc"
     assert ifc_loader.edges is True
-    assert ifc_loader.viewer_id == "viewer"
-    assert ifc_loader.scene_model_id == "sceneModel"
+    assert ifc_loader.viewer_variable_name == "viewer"
+    assert ifc_loader.variable_name == "sceneModel"
 
 
 def test_init_all_filled():
-    ifc_loader = WebIFCLoaderPlugin(path="IfcOpenHouse2x3.ifc", edges=False, viewer_id="another_viewer", scene_model_id="another_scene_model_id")
+    ifc_loader = WebIFCLoaderPlugin(path="IfcOpenHouse2x3.ifc",
+                                    edges=False,
+                                    viewer_variable_name="another_viewer",
+                                    variable_name="another_scene_model_id")
 
     assert ifc_loader.path == "IfcOpenHouse2x3.ifc"
     assert ifc_loader.edges is False
-    assert ifc_loader.viewer_id == "another_viewer"
-    assert ifc_loader.scene_model_id == "another_scene_model_id"
+    assert ifc_loader.viewer_variable_name == "another_viewer"
+    assert ifc_loader.variable_name == "another_scene_model_id"
 
 
 def test_str():

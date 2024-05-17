@@ -5,22 +5,22 @@ from xeopy import SectionPlanesPlugin
 def test_init_default():
     section_planes_plugin = SectionPlanesPlugin()
 
-    assert section_planes_plugin.viewer_id == "viewer"
+    assert section_planes_plugin.viewer_variable_name == "viewer"
     assert section_planes_plugin.overview_canvas_id == "mySectionPlanesOverviewCanvas"
     assert section_planes_plugin.overview_visible is True
-    assert section_planes_plugin.section_planes_plugin_id == "sectionPlanes"
+    assert section_planes_plugin.variable_name == "sectionPlanes"
 
 
 def test_init_all_filled():
-    section_planes_plugin = SectionPlanesPlugin(viewer_id="another_viewer",
+    section_planes_plugin = SectionPlanesPlugin(viewer_variable_name="another_viewer",
                                                 overview_canvas_id="another_canvas",
                                                 overview_visible=False,
-                                                section_planes_plugin_id="another_id")
+                                                variable_name="another_id")
 
-    assert section_planes_plugin.viewer_id == "another_viewer"
+    assert section_planes_plugin.viewer_variable_name == "another_viewer"
     assert section_planes_plugin.overview_canvas_id == "another_canvas"
     assert section_planes_plugin.overview_visible is False
-    assert section_planes_plugin.section_planes_plugin_id == "another_id"
+    assert section_planes_plugin.variable_name == "another_id"
 
 
 def test_str():

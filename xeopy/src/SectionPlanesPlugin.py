@@ -1,19 +1,19 @@
 class SectionPlanesPlugin:
 
     def __init__(self, **kwargs):
-        default_kwargs = {"viewer_id": "viewer",
-                          "section_planes_plugin_id": "sectionPlanes",
+        default_kwargs = {"viewer_variable_name": "viewer",
+                          "variable_name": "sectionPlanes",
                           "overview_canvas_id": "mySectionPlanesOverviewCanvas",
                           "overview_visible": True}
         kwargs = default_kwargs | kwargs
-        self.viewer_id = kwargs["viewer_id"]
-        self.section_planes_plugin_id = kwargs["section_planes_plugin_id"]
+        self.viewer_variable_name = kwargs["viewer_variable_name"]
+        self.variable_name = kwargs["variable_name"]
         self.overview_canvas_id = kwargs["overview_canvas_id"]
         self.overview_visible = kwargs["overview_visible"]
 
     def __str__(self):
         return "".join(
-            ["const ", self.section_planes_plugin_id, "= new SectionPlanesPlugin(", self.viewer_id, ", {", "\n",
+            ["const ", self.variable_name, "= new SectionPlanesPlugin(", self.viewer_variable_name, ", {", "\n",
              "overviewCanvasId: \"", self.overview_canvas_id, "\",", "\n",
              "overviewVisible: ", str(self.overview_visible).lower(), ",", "\n",
              "});"])

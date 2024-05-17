@@ -10,19 +10,19 @@ def test_init_default():
     assert box.z_size == 1.0
     assert box.center == [0.0, 0.0, 0.0]
     assert box.color == [0.0, 0.0, 0.0]
-    assert box.viewer_id == "viewer"
+    assert box.viewer_variable_name == "viewer"
 
 
 def test_init_all_filled():
     box = Box(x_size=2.0, y_size=3.0, z_size=4.0, center=[1.1, 2.2, 3.3], color=[0.1, 0.2, 0.3],
-              viewer_id="another_viewer")
+              viewer_variable_name="another_viewer")
 
     assert box.x_size == 2.0
     assert box.y_size == 3.0
     assert box.z_size == 4.0
     assert box.center == [1.1, 2.2, 3.3]
     assert box.color == [0.1, 0.2, 0.3]
-    assert box.viewer_id == "another_viewer"
+    assert box.viewer_variable_name == "another_viewer"
 
 
 def test_str():

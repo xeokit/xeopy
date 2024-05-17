@@ -1,9 +1,13 @@
 class WebIFCLoaderPlugin:
     def __init__(self, **kwargs):
-        default_kwargs = {"path": "Duplex.ifc", "edges": True, "viewer_id": "viewer", "scene_model_id": "sceneModel"}
+        default_kwargs = {"variable_name": "sceneModel",
+                          "viewer_variable_name": "viewer",
+                          "path": "Duplex.ifc",
+                          "edges": True,
+                          }
         kwargs = default_kwargs | kwargs
-        self.viewer_id = kwargs["viewer_id"]
-        self.scene_model_id = kwargs["scene_model_id"]
+        self.variable_name = kwargs["variable_name"]
+        self.viewer_variable_name = kwargs["viewer_variable_name"]
         self.path = kwargs["path"]
         self.edges = kwargs["edges"]
 
@@ -13,12 +17,12 @@ class WebIFCLoaderPlugin:
     IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");
 
     IfcAPI.Init().then(() => {
-        const ifcLoader = new WebIFCLoaderPlugin(""" + self.viewer_id + """, {
+        const ifcLoader = new WebIFCLoaderPlugin(""" + self.viewer_variable_name + """, {
             WebIFC,
             IfcAPI
         });
 
-        const """ + self.scene_model_id + """ = ifcLoader.load({
+        const """ + self.variable_name + """ = ifcLoader.load({
             src: \"""" + self.path + """\",
             edges: """ + str(self.edges).lower() + """
         });
