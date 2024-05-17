@@ -33,20 +33,20 @@ def test_str_show_control():
     section_plane = SectionPlane()
 
     assert section_plane.__str__() == ('const sectionPlane = sectionPlanes.createSectionPlane({\n'
- 'id: "mySectionPlane"\n'
- 'pos: [10.95, 1.95, -10.35]\n'
- 'dir: [0.0, -1.0, 0.0]\n'
+ 'id: "mySectionPlane",\n'
+ 'pos: [10.95, 1.95, -10.35],\n'
+ 'dir: [0.0, -1.0, 0.0],\n'
  '});\n'
- 'sectionPlanes.showControl(mySectionPlane)\n')
+ 'sectionPlanes.showControl("mySectionPlane")\n')
 
 
 def test_str_not_show_control():
     section_plane = SectionPlane(show_control=False)
 
     assert section_plane.__str__() == ('const sectionPlane = sectionPlanes.createSectionPlane({\n'
- 'id: "mySectionPlane"\n'
- 'pos: [10.95, 1.95, -10.35]\n'
- 'dir: [0.0, -1.0, 0.0]\n'
+ 'id: "mySectionPlane",\n'
+ 'pos: [10.95, 1.95, -10.35],\n'
+ 'dir: [0.0, -1.0, 0.0],\n'
  '});')
 
 

@@ -27,15 +27,15 @@ def test_str():
     section_planes_plugin = SectionPlanesPlugin()
 
     assert section_planes_plugin.__str__() == ('const sectionPlanes= new SectionPlanesPlugin(viewer, {\n'
- 'overviewCanvasId: "mySectionPlanesOverviewCanvas"\n'
- 'overviewVisible: true\n'
+ 'overviewCanvasId: "mySectionPlanesOverviewCanvas",\n'
+ 'overviewVisible: true,\n'
  '});')
 
 
 def test_get_additional_styles():
     section_planes_plugin = SectionPlanesPlugin()
 
-    assert section_planes_plugin.get_additional_styles() == {'        #mySectionPlanesOverviewCanvas {\n'
+    assert section_planes_plugin.get_additional_styles() == {'#mySectionPlanesOverviewCanvas {\n'
  '            position: absolute;\n'
  '            width: 250px;\n'
  '            height: 250px;\n'

@@ -14,12 +14,12 @@ class SectionPlanesPlugin:
     def __str__(self):
         return "".join(
             ["const ", self.section_planes_plugin_id, "= new SectionPlanesPlugin(", self.viewer_id, ", {", "\n",
-             "overviewCanvasId: \"", self.overview_canvas_id, "\"", "\n",
-             "overviewVisible: ", str(self.overview_visible).lower(), "\n",
+             "overviewCanvasId: \"", self.overview_canvas_id, "\",", "\n",
+             "overviewVisible: ", str(self.overview_visible).lower(), ",", "\n",
              "});"])
 
     def get_additional_styles(self):
-        return {"""        #""" + self.overview_canvas_id + """ {
+        return {"""#""" + self.overview_canvas_id + """ {
             position: absolute;
             width: 250px;
             height: 250px;

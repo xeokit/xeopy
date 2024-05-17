@@ -55,8 +55,9 @@ class Xeokit:
             position: absolute;
             background: lightblue;
             background-image: linear-gradient(lightblue, white);
-            """ + additional_styles_string + """
         }
+        
+        """ + additional_styles_string + """
     </style>
 </head>
 <body>

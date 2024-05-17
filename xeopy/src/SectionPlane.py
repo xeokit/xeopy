@@ -18,13 +18,13 @@ class SectionPlane:
     def __str__(self):
         show_control_line = ""
         if self.show_control:
-            show_control_line = "".join(["\n", self.section_planes_plugin_variable_name, ".showControl(", self.id, ")", "\n"])
+            show_control_line = "".join(["\n", self.section_planes_plugin_variable_name, ".showControl(", "\"", self.id, "\"", ")", "\n"])
 
         return "".join(
             ["const ", self.variable_name, " = ", self.section_planes_plugin_variable_name, ".createSectionPlane({", "\n",
-             "id: \"", self.id, "\"", "\n",
-             "pos: ", str(self.position), "\n",
-             "dir: ", str(self.direction), "\n",
+             "id: \"", self.id, "\",", "\n",
+             "pos: ", str(self.position), ",", "\n",
+             "dir: ", str(self.direction), ",", "\n",
              "});", show_control_line])
 
     def get_additional_styles(self):
