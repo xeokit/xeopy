@@ -5,3 +5,4 @@ from xeopy.src.WebIFCLoaderPlugin import *
 from xeopy.src.Box import *
 from xeopy.src.SceneModelOnLoaded import *
 from xeopy.src.SectionPlanesPlugin import *
+from xeopy.src.SectionPlane import *
