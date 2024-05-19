@@ -19,6 +19,8 @@ I'm open to hear suggestion regarding what should be added. Please open an issue
 
 ## Example files
 
+![Examples](examples_image.png)
+
 You will find example files here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/examples
 
 ## Unit tests
