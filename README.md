@@ -1,8 +1,10 @@
-# xeopy = Xeokit + Python (Proof of concept, work in progress project)
+# xeopy = Xeokit + Python (Work in progress project)
 
 ## Description
 
 xeopy is a library which allows to create Xeokit scenes using Python.
+
+It is currently a proof-of-concept prototype.
 
 ## Features
 
@@ -23,10 +25,16 @@ I'm open to hear suggestion regarding what should be added. Please open an issue
 
 You will find example files here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/examples
 
-## Unit tests
+## How to run it
 
-You can find and run unit tests inside the project here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/unittests
+1. Clone this repository
+2. Run one of the example .py files -> it should generate html file
+3. Run generated html file on localhost. Some IDEs (such as PyCharm) will let you do it with one click of a button (for PyCharm just open generated html file and click web-browser logo).
 
 ## How it works
 
 xeopy concept is really simple: underneath it creates an html file filled with JS code which uses Xeokit. Later you can open such html file and see the results.
+
+## Unit tests
+
+You can find and run unit tests inside the project here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/unittests
