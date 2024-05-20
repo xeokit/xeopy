@@ -1,6 +1,8 @@
 from xeopy import *
 import random
 
+# Creating random boxes
+
 x_range = (-10.0, 10.0)
 y_range = (-20.0, 20.0)
 z_range = (-30.0, 30.0)
@@ -14,6 +16,8 @@ for i in points:
                      z_size=random.uniform(*box_size_range),
                      center=[i[0], i[1], i[2]],
                      color=[abs(i[0])/x_range[1], abs(i[1])/y_range[1], abs(i[2])/z_range[1]]))
+
+# Creating a file and adding all boxes there
 
 xeokit = Xeokit(content=[Viewer(), CameraSettings(), boxes], file_path="create_boxes.html")
 xeokit.create_and_save()
