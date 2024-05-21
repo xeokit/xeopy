@@ -4,7 +4,11 @@
 
 xeopy is a library which allows to create Xeokit scenes using Python.
 
+xeopy is fully written in Python.
+
 It is currently a proof-of-concept prototype.
+
+Xeokit itself is a web programming toolkit for AEC graphics. Find more here: https://xeokit.io/
 
 ## Features
 
