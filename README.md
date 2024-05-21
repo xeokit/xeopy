@@ -37,4 +37,4 @@ xeopy concept is really simple: underneath it creates an html file filled with J
 
 ## Unit tests
 
-You can find and run unit tests inside the project here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/unittests
+You can find and run unit tests inside the project here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/unit_tests
