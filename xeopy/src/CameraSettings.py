@@ -9,9 +9,9 @@ class CameraSettings:
         self.up = kwargs["up"]
 
     def __str__(self):
-        return "".join([self.viewer_variable_name, ".camera.eye = + ", str(self.eye), ";\n",
-                        self.viewer_variable_name, ".camera.look = + ", str(self.look), ";\n",
-                        self.viewer_variable_name, ".camera.up = + ", str(self.up), ";\n"])
+        return "".join([self.viewer_variable_name, ".camera.eye = ", str(self.eye), ";\n",
+                        self.viewer_variable_name, ".camera.look = ", str(self.look), ";\n",
+                        self.viewer_variable_name, ".camera.up = ", str(self.up), ";\n"])
 
     def get_additional_styles(self):
         return {}
