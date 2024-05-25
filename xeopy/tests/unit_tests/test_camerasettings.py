@@ -24,9 +24,9 @@ def test_init_all_filled():
 def test_str():
     camera_settings = CameraSettings()
 
-    assert camera_settings.__str__() == """viewer.camera.eye = + [-3.933, 2.855, 27.018];
-viewer.camera.look = + [4.4, 3.724, 8.899];
-viewer.camera.up = + [-0.018, 0.999, 0.039];
+    assert camera_settings.__str__() == """viewer.camera.eye = [-3.933, 2.855, 27.018];
+viewer.camera.look = [4.4, 3.724, 8.899];
+viewer.camera.up = [-0.018, 0.999, 0.039];
 """
 
 
