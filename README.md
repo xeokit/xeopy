@@ -27,7 +27,7 @@ I'm open to hear suggestion regarding what should be added. Please open an issue
 
 ![Examples](imgs/examples_image.png)
 
-You will find example files here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/examples
+You will find example files here: https://github.com/xeokit/xeopy/tree/master/xeopy/tests/examples
 
 ## How to run it
 
@@ -35,9 +35,15 @@ You will find example files here: https://github.com/paireks/xeopy/tree/master/x
 2. Run one of the example .py files -> it should generate html file
 3. Run generated html file on localhost. Some IDEs (such as PyCharm) will let you do it with one click of a button (for PyCharm just open generated html file and click web-browser logo).
 
+There is no yet PyPi package published, as it is a prototype.
+
 ## How it works
 
 xeopy concept is really simple: underneath it creates an html file filled with JS code which uses Xeokit. Later you can open such html file and see the results.
+
+## License
+
+Find the license here: https://github.com/xeokit/xeopy/blob/master/LICENSE.md
 
 ## Development
 
@@ -51,7 +57,7 @@ In Pycharm you can do it like this:
 
 ### Unit tests
 
-You can find and run unit tests inside the project here: https://github.com/paireks/xeopy/tree/master/xeopy/tests/unit_tests
+You can find and run unit tests inside the project here: https://github.com/xeokit/xeopy/tree/master/xeopy/tests/unit_tests
 
 To run these tests you will also need to install pytest library.
 
