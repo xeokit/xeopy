@@ -14,6 +14,9 @@ xeokit itself is a web programming toolkit for AEC graphics. Find more here: htt
 
 Right now you can control some things regarding:
 - [x] Box
+- [x] Mesh
+- [x] Sphere
+- [ ] More geometry types
 - [x] CameraSettings
 - [x] WebIFCLoaderPlugin
 - [x] Viewer
