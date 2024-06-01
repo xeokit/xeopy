@@ -16,6 +16,7 @@ Right now you can control some things regarding:
 - [x] Box
 - [x] Mesh
 - [x] Sphere
+- [x] VectorText
 - [ ] More geometry types
 - [x] CameraSettings
 - [x] WebIFCLoaderPlugin

@@ -7,3 +7,4 @@ from xeopy.src.Sphere import *
 from xeopy.src.SectionPlanesPlugin import *
 from xeopy.src.SectionPlane import *
 from xeopy.src.Mesh import *
+from xeopy.src.VectorText import *
