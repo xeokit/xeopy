@@ -20,6 +20,7 @@ Right now you can control some things regarding:
 - [ ] More geometry types
 - [x] CameraSettings
 - [x] WebIFCLoaderPlugin
+- [x] XKTLoaderPlugin
 - [x] Viewer
 - [x] SectionPlanes
 - [ ] SceneModel
