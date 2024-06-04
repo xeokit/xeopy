@@ -29,8 +29,7 @@ class SectionPlanesPlugin:
             /*border: 1px solid blue;*/
         }"""}
 
-    @staticmethod
-    def get_additional_imports():
+    def get_additional_imports(self):
         return {}
 
     @staticmethod

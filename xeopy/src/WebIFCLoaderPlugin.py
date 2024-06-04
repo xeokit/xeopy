@@ -13,10 +13,6 @@ class WebIFCLoaderPlugin:
 
     def __str__(self):
         return """
-    const IfcAPI = new WebIFC.IfcAPI();
-    IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");
-
-    IfcAPI.Init().then(() => {
         const ifcLoader = new WebIFCLoaderPlugin(""" + self.viewer_variable_name + """, {
             WebIFC,
             IfcAPI
@@ -26,15 +22,13 @@ class WebIFCLoaderPlugin:
             src: \"""" + self.path + """\",
             edges: """ + str(self.edges).lower() + """
         });
-    });
 """
 
     def get_additional_styles(self):
         return {}
 
-    @staticmethod
-    def get_additional_imports():
-        return {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
+    def get_additional_imports(self):
+        return {}
 
     @staticmethod
     def get_xeokit_modules_needed():

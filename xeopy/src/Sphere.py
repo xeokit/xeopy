@@ -31,8 +31,7 @@ class Sphere:
     def get_additional_styles(self):
         return {}
 
-    @staticmethod
-    def get_additional_imports():
+    def get_additional_imports(self):
         return {}
 
     @staticmethod

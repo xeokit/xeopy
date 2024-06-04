@@ -27,10 +27,6 @@ def test_str():
     ifc_loader = WebIFCLoaderPlugin()
 
     assert ifc_loader.__str__() == ('\n'
- '    const IfcAPI = new WebIFC.IfcAPI();\n'
- '    IfcAPI.SetWasmPath("https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/");\n'
- '\n'
- '    IfcAPI.Init().then(() => {\n'
  '        const ifcLoader = new WebIFCLoaderPlugin(viewer, {\n'
  '            WebIFC,\n'
  '            IfcAPI\n'
@@ -39,8 +35,7 @@ def test_str():
  '        const sceneModel = ifcLoader.load({\n'
  '            src: "Duplex.ifc",\n'
  '            edges: true\n'
- '        });\n'
- '    });\n')
+ '        });\n')
 
 
 def test_get_additional_styles():
@@ -52,7 +47,7 @@ def test_get_additional_styles():
 def test_get_additional_imports():
     ifc_loader = WebIFCLoaderPlugin()
 
-    assert ifc_loader.get_additional_imports() == {'import * as WebIFC from "https://cdn.jsdelivr.net/npm/web-ifc@0.0.51/web-ifc-api.js";'}
+    assert ifc_loader.get_additional_imports() == {}
 
 
 def test_get_xeokit_modules_needed():
