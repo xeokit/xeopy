@@ -6,25 +6,24 @@ xeopy is a library which allows to create xeokit scenes using Python.
 
 xeopy is fully written in Python.
 
-It is currently a proof-of-concept prototype.
+It is currently a proof-of-concept prototype. Use on your own risk.
+
+The scope, namings and structure of it is changing rapidly, that's why it's not published as a PIP package right now.
 
 xeokit itself is a web programming toolkit for AEC graphics. Find more here: https://xeokit.io/
 
 ## Features
 
 Right now you can control some things regarding:
-- [x] Box
-- [x] Mesh
-- [x] Sphere
-- [x] VectorText
-- [ ] More geometry types
-- [x] CameraSettings
-- [x] WebIFCLoaderPlugin
-- [x] XKTLoaderPlugin
-- [x] Viewer
-- [x] SectionPlanes
-- [ ] SceneModel
-- [ ] MetaModel
+- Box
+- Mesh
+- Sphere
+- VectorText
+- CameraSettings
+- WebIFCLoaderPlugin
+- XKTLoaderPlugin
+- Viewer
+- SectionPlanes
 
 I'm open to hear suggestion regarding what should be added. Please open an issue here and let me know! :)
 
@@ -59,6 +58,12 @@ After clone it's good to create a venv (virtual environment).
 In Pycharm you can do it like this:
 
 ![Venv_pycharm](imgs/venv_pycharm.png)
+
+### Architecture
+
+Idea is that each small Python object should represent in **str** a tiny slice of JS code.
+
+All these objects can be later put into **content** property of Xeokit object, so they can generate full code definition, if put in proper order.
 
 ### Unit tests
 
