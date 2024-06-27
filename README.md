@@ -78,3 +78,12 @@ In Pycharm you can run all the tests by right-clicking the unit_tests folder and
 You can also install coverage package to see code coverage.
 
 In Pycharm it's Run -> Run 'Python tests in unit_tests' with Coverage
+
+## E2E tests for Xeokit examples itself
+
+There is an endtoend_xeokit_tests folder where you can optionally build E2E test for Xeokit itself.
+
+It uses Selenium to build test these things. To run it you need to place a geckodriver (0.34.0, https://github.com/mozilla/geckodriver/releases)
+exactly where the .py file is located.
+
+It will also require a proper version of browser installed.
