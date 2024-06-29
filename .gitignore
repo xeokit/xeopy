@@ -1,2 +1,4 @@
 /venv/
 /xeopy/endtoend_xeokit_tests/geckodriver.exe
+/xeopy/endtoend_xeokit_tests/annotations_clickFlyToPosition/actual_after_click.png
+/xeopy/endtoend_xeokit_tests/annotations_clickFlyToPosition/actual_before_click.png
